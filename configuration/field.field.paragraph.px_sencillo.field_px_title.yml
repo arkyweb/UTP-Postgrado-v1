@@ -1,0 +1,19 @@
+uuid: b9abcba3-9deb-490e-a960-88cee299f247
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_px_title
+    - paragraphs.paragraphs_type.px_sencillo
+id: paragraph.px_sencillo.field_px_title
+field_name: field_px_title
+entity_type: paragraph
+bundle: px_sencillo
+label: Título
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

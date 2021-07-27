@@ -1,0 +1,18 @@
+uuid: 938dbcd9-e90f-4314-802b-c53e5f39e4a8
+langcode: es
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_px_acordion_simple
+field_name: field_px_acordion_simple
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

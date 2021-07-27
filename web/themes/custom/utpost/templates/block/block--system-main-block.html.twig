@@ -1,0 +1,13 @@
+{% if logged_in %}
+<div{{ attributes }}>
+{{ title_prefix }}
+{{ title_suffix }}
+{% endif %}
+
+{% block content %}
+  {{ content }}
+{% endblock %}
+
+{% if logged_in %}
+</div>
+{% endif %}

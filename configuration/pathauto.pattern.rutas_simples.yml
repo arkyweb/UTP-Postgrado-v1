@@ -1,0 +1,23 @@
+uuid: 4a911884-5494-46a2-a8aa-402d23a47eff
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: rutas_simples
+label: 'Rutas Simples'
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria:
+  69807b8d-cffb-48fb-a68d-c6a231d2636a:
+    id: node_type
+    bundles:
+      buildings: buildings
+      page: page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 69807b8d-cffb-48fb-a68d-c6a231d2636a
+selection_logic: and
+weight: -5
+relationships: {  }

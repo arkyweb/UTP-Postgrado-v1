@@ -1,0 +1,6 @@
+{% set sitename_tag = is_front ? 'h1' : 'div' %}
+<{{ sitename_tag }} id="logo" class="logo order-desktop-first">
+  <a href="{{ url('<front>') }}" aria-label="{{ site_name }}">
+    <img data-src="{{ logo_img }}" uk-img height="42" width="180" alt="{{ site_name }}"/>
+  </a>
+</{{ sitename_tag }}>

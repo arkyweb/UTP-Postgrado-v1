@@ -1,0 +1,26 @@
+
+{% import _self as menus %}
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% set sitemap_classes = 'sitemap_ul' %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass(sitemap_classes).setAttribute('uk-accordion', '') }}>
+    {% elseif menu_level == 1 %}
+      <ul class="uk-accordion-content">
+    {% else %}
+      <ul>
+    {% endif %}
+    {% for item in items %}
+      <li{{ item.attributes }}>
+        {{ link(item.title, item.url, item.attributes.addClass('uk-accordion-title')) }}
+        {% if item.below %}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

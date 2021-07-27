@@ -1,0 +1,11 @@
+uuid: b0ace29e-2c98-43f3-ae37-ffa5f3a4e425
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tx_carusel
+id: taxonomy_term.tx_carusel
+target_entity_type_id: taxonomy_term
+target_bundle: tx_carusel
+default_langcode: site_default
+language_alterable: false

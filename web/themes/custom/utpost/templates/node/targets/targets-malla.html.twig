@@ -1,0 +1,43 @@
+{% if node.field_target_malla.0.value|length > 0 %}
+<section id="malla" class="malla">
+<header>
+  <div class="columnas">
+    <div class="col_2">
+      <h3>Malla Curricular</h3>
+    </div>
+    <div class="col_2">
+      <a href="{{ file_url(node.field_target_malla.entity.uri.value) }}" class="boton_negro" target="_blank">
+        Sumilla
+      </a>
+    </div>
+  </div>
+</header>
+
+{% if node.field_target_malla_img.0.value|length > 0 %}
+<article>
+  {% if content.field_target_malla_img[1] %}
+  <img data-src="{{ file_url(node.field_target_malla_img.0.entity.fileuri) }}"
+     data-srcset="{{ file_url(node.field_target_malla_img.0.entity.fileuri) }} 320w,
+                  {{ file_url(node.field_target_malla_img.1.entity.fileuri) }} 900w"
+     sizes="(min-width: 320px) 320px, 900vw"
+     width="{{ node.field_target_malla_img.0.width }}" height="{{ node.field_target_malla_img.0.height }}"
+     alt="Malla {{ node.label }} Mobile" class="img_full" uk-img>
+  {% else %}
+  <img class="img_full" data-src="{{ file_url(node.field_target_malla_img.0.entity.fileuri) }}" alt="Malla {{ node.label }}"
+  width="{{ node.field_target_malla_img.0.width }}" height="{{ node.field_target_malla_img.0.height }}"  uk-img />
+  {% endif %}
+</article>
+{% endif %}
+
+{% if node.field_target_malla_acordion.0.value|length > 0 %}
+<ul uk-accordion>
+{% for parrafo in node.field_target_malla_acordion %}
+  <li {% if loop.first %}class="uk-open"{% endif %}>
+    {% include '@utpost/node/parrafos/parrafo.html.twig' ignore missing %}
+  </li>
+{% endfor %}
+</ul>
+{% endif %}
+
+</section>
+{% endif %}

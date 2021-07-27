@@ -1,0 +1,14 @@
+uuid: 7168495e-1171-457c-9545-0a4f3596e2e2
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tx_parrafos
+id: taxonomy_vocabulary_tx_parrafos
+entity_type_id: taxonomy_vocabulary
+entity_id: tx_parrafos
+action: page_redirect
+allow_override: 1
+redirect: /<front>
+redirect_code: 301
+redirect_fallback_action: access_denied

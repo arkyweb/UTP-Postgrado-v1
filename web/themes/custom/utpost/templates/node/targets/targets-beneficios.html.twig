@@ -1,0 +1,14 @@
+{% if node.field_target_beneficios.value|length > 0 %}
+<section id="beneficios" class="beneficios">
+<header>
+  <h3 class="titular">Beneficios</h3>
+</header>
+<ul uk-accordion>
+{% for parrafo in node.field_target_beneficios %}
+  <li {% if loop.first %}class="uk-open"{% endif %}>
+    {% include '@utpost/node/parrafos/parrafo.html.twig' ignore missing %}
+  </li>
+{% endfor %}
+</ul>
+</section>
+{% endif %}

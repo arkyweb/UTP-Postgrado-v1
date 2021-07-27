@@ -1,0 +1,22 @@
+uuid: b3da9830-89c1-4b4d-b5ec-06620345b445
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - utpost
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: utpost_breadcrumbs
+theme: utpost
+region: disabled_area
+weight: 4
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Enlaces de ayuda a la navegación'
+  provider: system
+  label_display: '0'
+visibility: {  }

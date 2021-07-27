@@ -1,0 +1,77 @@
+uuid: 719dcb03-d1a1-4182-a812-122f59db3108
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.targets.body
+    - field.field.node.targets.field_etiqueta_image
+    - field.field.node.targets.field_target_abbr
+    - field.field.node.targets.field_target_about
+    - field.field.node.targets.field_target_area
+    - field.field.node.targets.field_target_beneficios
+    - field.field.node.targets.field_target_brochure
+    - field.field.node.targets.field_target_conectados
+    - field.field.node.targets.field_target_dirigido
+    - field.field.node.targets.field_target_docentes
+    - field.field.node.targets.field_target_duracion
+    - field.field.node.targets.field_target_encargado
+    - field.field.node.targets.field_target_final
+    - field.field.node.targets.field_target_horario
+    - field.field.node.targets.field_target_inicio
+    - field.field.node.targets.field_target_inversion
+    - field.field.node.targets.field_target_malla
+    - field.field.node.targets.field_target_malla_acordion
+    - field.field.node.targets.field_target_malla_img
+    - field.field.node.targets.field_target_point
+    - field.field.node.targets.field_target_type
+    - field.field.node.targets.field_target_whatsapp
+    - field.field.node.targets.field_titulo
+    - field.field.node.targets.field_titulo_img
+    - node.type.targets
+  module:
+    - text
+    - user
+id: node.targets.teaser
+targetEntityType: node
+bundle: targets
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_etiqueta_image: true
+  field_target_abbr: true
+  field_target_about: true
+  field_target_area: true
+  field_target_beneficios: true
+  field_target_brochure: true
+  field_target_conectados: true
+  field_target_dirigido: true
+  field_target_docentes: true
+  field_target_duracion: true
+  field_target_encargado: true
+  field_target_final: true
+  field_target_horario: true
+  field_target_inicio: true
+  field_target_inversion: true
+  field_target_malla: true
+  field_target_malla_acordion: true
+  field_target_malla_img: true
+  field_target_point: true
+  field_target_type: true
+  field_target_whatsapp: true
+  field_titulo: true
+  field_titulo_img: true
+  langcode: true

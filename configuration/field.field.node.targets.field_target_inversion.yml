@@ -1,0 +1,19 @@
+uuid: 63846bb0-4dcf-43be-b84a-2d81d166624b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_target_inversion
+    - node.type.targets
+id: node.targets.field_target_inversion
+field_name: field_target_inversion
+entity_type: node
+bundle: targets
+label: Inversión
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

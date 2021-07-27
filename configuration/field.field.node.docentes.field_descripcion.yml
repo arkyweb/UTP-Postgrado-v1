@@ -1,0 +1,21 @@
+uuid: d4d91591-1938-4b9d-99d2-2de454da8cbb
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion
+    - node.type.docentes
+  module:
+    - text
+id: node.docentes.field_descripcion
+field_name: field_descripcion
+entity_type: node
+bundle: docentes
+label: Descripción
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

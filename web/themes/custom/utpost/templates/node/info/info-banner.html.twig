@@ -1,0 +1,45 @@
+<div id="presentacion" class="col_3_4 target_presentacion">
+<div class="presentacion_container">
+
+{% if node.field_titulo.0.value|length > 0 %}
+
+  {% if node.field_target_abbr.0.value|length > 0 %}
+  <h2 class="subtitulo">
+    <span>{{ node.field_target_abbr.0.value }}</span>
+    {% if node.field_target_type.0.target_id in ['3'] %} Especialización en
+    {% elseif node.field_target_type.0.target_id in ['17'] %} Especialización Online en
+    {% elseif node.field_target_type.0.target_id in ['2'] %} Maestría en
+    {% elseif node.field_target_type.0.target_id in ['5'] %} Maestría Online en
+    {% elseif node.field_target_type.0.target_id in ['1'] %} Extensión en{% endif %}
+  </h2>
+  {% endif %}
+  <h1 id="title" class="title">
+    {{ node.field_titulo.0.value }}
+    {% if node.field_titulo.1.value %}<br>{{ node.field_titulo.1.value }}{% endif %}
+    {% if node.field_titulo.2.value %}<br>{{ node.field_titulo.2.value }}{% endif %}
+  </h1>
+
+{% elseif node.field_titulo_img.0.value|length > 0 %}
+
+  <h1 id="title" class="title_img">
+    <img
+    data-src="{{ file_url(node.field_titulo_img.0.entity.fileuri) }}" alt="{{ node.entity.label.value }}"
+    width="{{ node.field_titulo_img.0.width }}" height="{{ node.field_titulo_img.0.height }}" uk-img />
+  </h1>
+
+{% else %}
+
+  <h1 id="title" class="title">
+    {{ node.label }}
+  </h1>
+
+{% endif %}
+
+{% if node.field_target_brochure.0.value|length > 0 %}
+<a href="{{ file_url(node.field_target_brochure.entity.uri.value) }}" class="boton_blanco" target="_blank">
+  Brochure
+</a>
+{% endif %}
+
+</div>
+</div>

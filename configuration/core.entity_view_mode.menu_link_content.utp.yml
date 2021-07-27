@@ -1,0 +1,10 @@
+uuid: 6a28969f-e300-4053-b67c-9519adb0ecee
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_link_content
+id: menu_link_content.utp
+label: UTP
+targetEntityType: menu_link_content
+cache: true

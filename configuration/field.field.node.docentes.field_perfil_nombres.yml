@@ -1,0 +1,19 @@
+uuid: 4b5bdc25-33d5-4d09-9e55-d5e367010c20
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_perfil_nombres
+    - node.type.docentes
+id: node.docentes.field_perfil_nombres
+field_name: field_perfil_nombres
+entity_type: node
+bundle: docentes
+label: Nombres
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

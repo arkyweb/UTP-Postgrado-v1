@@ -1,0 +1,38 @@
+uuid: 48886f69-5a9d-408c-8682-bfd221146968
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_foto
+    - node.type.docentes
+  module:
+    - image
+id: node.docentes.field_foto
+field_name: field_foto
+entity_type: node
+bundle: docentes
+label: Foto
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: foto
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: true
+  title_field_required: false
+  default_image:
+    uuid: b6472d24-b533-4e2b-b16a-52999dfdb013
+    alt: ''
+    title: ''
+    width: 500
+    height: 500
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

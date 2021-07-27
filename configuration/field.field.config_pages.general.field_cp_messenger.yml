@@ -1,0 +1,19 @@
+uuid: e038defd-0664-436a-87e0-ed7bc684fc34
+langcode: es
+status: true
+dependencies:
+  config:
+    - config_pages.type.general
+    - field.storage.config_pages.field_cp_messenger
+id: config_pages.general.field_cp_messenger
+field_name: field_cp_messenger
+entity_type: config_pages
+bundle: general
+label: 'Comunica Messenger'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

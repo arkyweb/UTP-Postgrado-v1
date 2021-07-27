@@ -1,0 +1,43 @@
+uuid: 955ba927-e7bd-45a8-81e4-ddefaa8dd133
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_px_carousel
+    - paragraphs.paragraphs_type.px_block
+    - paragraphs.paragraphs_type.px_carousel
+  module:
+    - entity_reference_revisions
+id: paragraph.px_block.field_px_carousel
+field_name: field_px_carousel
+entity_type: paragraph
+bundle: px_block
+label: Carousel
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      px_carousel: px_carousel
+    target_bundles_drag_drop:
+      px_block:
+        weight: 6
+        enabled: false
+      px_carousel:
+        enabled: true
+        weight: 7
+      px_carousel_group:
+        weight: 8
+        enabled: false
+      px_header:
+        weight: 9
+        enabled: false
+      px_sencillo:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

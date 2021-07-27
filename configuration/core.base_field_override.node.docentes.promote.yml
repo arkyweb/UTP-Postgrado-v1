@@ -1,0 +1,22 @@
+uuid: def36327-4882-46d4-a541-525868ed3179
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.docentes
+id: node.docentes.promote
+field_name: promote
+entity_type: node
+bundle: docentes
+label: 'Promocionado a la página principal'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

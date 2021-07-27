@@ -1,0 +1,11 @@
+{% if content %}
+
+{% if logged_in %}
+<div{{ attributes }}>
+{{ content }}
+</div>
+{% else %}
+{{ content }}
+{% endif %}
+
+{% endif %}

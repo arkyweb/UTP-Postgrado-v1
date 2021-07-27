@@ -1,0 +1,126 @@
+<?php
+
+define('THEME_PATH', base_path() . drupal_get_path('theme', 'utpost'));
+
+use Drupal\Component\Utility\SafeMarkup;
+use Drupal\Component\Utility\Xss;
+use Drupal\Core\Template\Attribute;
+use Drupal\file\Plugin\Core\Entity\FileInterface;
+use Drupal\Component\Utility\Html;
+use \Drupal\block_content\BlockContentInterface;
+use \Drupal\taxonomy\Entity\Term;
+use Drupal\Core\Form\FormStateInterface;
+use \Drupal\Core\Render\Element;
+use Drupal\Core\Entity\EntityInterface;
+use \Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\media\Entity\Media;
+use Drupal\file\Entity\File;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\config_pages\Entity\ConfigPages;
+use Drupal\Core\Url;
+use Drupal\Core\Link;
+use Drupal\Component\Utility\Unicode;
+
+//$mylink = Url::fromUri($node->field_name[0]->uri);
+
+function utpost_preprocess(array &$variables, $hook) {
+  $variables['base_path'] = base_path();
+
+  $generalConfig = \Drupal\config_pages\Entity\ConfigPages::config('general');
+  $variables['subs_title_0']      = $generalConfig->get('field_cp_subs_title')->get(0)->value;
+  $variables['subs_title_1']      = $generalConfig->get('field_cp_subs_title')->get(1)->value;
+  $variables['subs_title_2']      = $generalConfig->get('field_cp_subs_title')->get(2)->value;
+  $variables['subs_body_0']       = $generalConfig->get('field_cp_subs_body')->get(0)->value;
+  $variables['subs_body_1']       = $generalConfig->get('field_cp_subs_body')->get(1)->value;
+  $variables['transparencia']     = $generalConfig->get('field_cp_transparencia')->get(0)->value;
+  $variables['telefono']          = $generalConfig->get('field_cp_telefono')->get(0)->value;
+  $variables['direccion']         = $generalConfig->get('field_cp_direccion')->get(0)->value;
+  $variables['autorizacion']      = $generalConfig->get('field_cp_autorizo')->get(0)->value;
+  $variables['publicidad']        = $generalConfig->get('field_cp_publicidad')->get(0)->value;
+
+  $variables['rrss_0']  = $generalConfig->get('field_cp_rrss')->get(0)->getUrl(); //->toString()
+  $variables['rrss_1']  = $generalConfig->get('field_cp_rrss')->get(1)->getUrl();
+  $variables['rrss_2']  = $generalConfig->get('field_cp_rrss')->get(2)->getUrl();
+
+  $variables['rrss_0_svg']  = $generalConfig->get('field_cp_rrss')->get(0)->get('title')->getValue();
+  $variables['rrss_1_svg']  = $generalConfig->get('field_cp_rrss')->get(1)->get('title')->getValue();
+  $variables['rrss_2_svg']  = $generalConfig->get('field_cp_rrss')->get(2)->get('title')->getValue();
+
+  $variables['transparencia_img'] = file_create_url(
+    \Drupal\file\Entity\File::load($generalConfig->get('field_cp_transparencia_img')->get(0)->target_id)->uri->value
+  );
+  $variables['intercorp_img'] = file_create_url(
+    \Drupal\file\Entity\File::load($generalConfig->get('field_cp_intercorp_img')->get(0)->target_id)->uri->value
+  );
+  $variables['logo_img'] = file_create_url(
+    \Drupal\file\Entity\File::load($generalConfig->get('field_cp_logo_img')->get(0)->target_id)->uri->value
+  );
+
+  // optional: add a cache dependency
+  $variables['#cache']['tags'][] = 'config_pages:' . $generalConfig ->id();
+}
+
+function utpost_preprocess_html(&$variables) {
+  $user = \Drupal::currentUser();
+  $variables['user'] = clone $user;
+  // Remove password and session IDs, since themes should not need nor see them.
+  unset($variables['user']->pass, $variables['user']->sid, $variables['user']->ssid);
+  $variables['is_admin'] = $user->hasPermission('access administration pages');
+  $variables['logged_in'] = $user->isAuthenticated();
+
+  $path_class = !$variables['root_path'] ? 'front' : 'p_' . Html::getClass($variables['root_path']);
+  if (isset($path_class)) {
+    $variables['attributes']['class'][] = $path_class;
+  }
+  $path = \Drupal::service('path.current')->getPath();
+  $path_args = explode('/', $path);
+  if (isset($path_args[1]) && isset($path_args[2]) && ($path_args[1] == 'node') && (is_numeric($path_args[2]))) {
+    $variables['attributes']['class'][] = 'd_' . $path_args[2];
+  }
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $variables['node'] = $node;
+  }
+  if (isset($path_args[0]) && isset($path_args[1]) && ($path_args[0] == 'user')) {
+    $variables['attributes']['class'][] = 'u_' . $path_args[1];
+  }
+  if (\Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.canonical') {
+    $variables['term_id'] = \Drupal::routeMatch()->getRawParameter('t_');
+  }
+  $view_id = \Drupal::routeMatch()->getParameter('view_id');
+  if ($view_id) {
+    $variables['attributes']['class'][] = 'w_' . Html::cleanCssIdentifier($view_id);
+  }
+  $account = \Drupal::currentUser();
+  $roles = $account->getRoles();
+  foreach ($roles as $role) {
+    $variables['attributes']['class'][] = $role;
+  }
+
+}
+
+function utpost_preprocess_page(&$variables) {
+  $variables['base_path'] = base_path();
+
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $variables['node'] = $node;
+  }
+  if (\Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.canonical') {
+    $term = \Drupal::routeMatch()->getParameter('taxonomy_term');
+    $variables['term'] = $term;
+  }
+}
+
+function utpost_theme_suggestions_page_alter (array &$suggestions, array $variables) {
+  $parameters = \Drupal::routeMatch()->getParameters()->all();
+  if (isset($parameters['view_id']) && isset($parameters['display_id'])) {
+    ['view_id' => $view_id, 'display_id' => $display_id] = $parameters;
+    $suggestions[] = 'page__view';
+    $suggestions[] = 'page__view__' . $view_id;
+    $suggestions[] = 'page__view__' . $view_id . '__' . $display_id;
+  }
+
+  if (\Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.canonical' && $tid = \Drupal::routeMatch()->getRawParameter('taxonomy_term')) {
+    $term = Term::load($tid);
+    $suggestions[] = 'page__taxonomy__' . $term->getVocabularyId();
+  }
+}

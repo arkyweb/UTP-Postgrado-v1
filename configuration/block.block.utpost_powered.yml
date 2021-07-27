@@ -1,0 +1,22 @@
+uuid: f5f14fdb-b24d-45eb-8b63-d2341a6d083b
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - utpost
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: utpost_powered
+theme: utpost
+region: disabled_area
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Funciona con Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,10 @@
+uuid: c69d8f64-1ac3-479a-a645-671243143767
+langcode: es
+status: true
+dependencies: {  }
+id: px_sencillo
+label: Simple
+icon_uuid: null
+icon_default: null
+description: 'Puede contar con imagen, texto y título'
+behavior_plugins: {  }

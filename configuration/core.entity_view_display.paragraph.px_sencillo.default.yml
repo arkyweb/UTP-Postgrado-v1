@@ -1,0 +1,92 @@
+uuid: 5aa24dc9-d702-4272-b1b2-af017c179a3b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.px_sencillo.field_px_acordion
+    - field.field.paragraph.px_sencillo.field_px_acordion_cuerpo
+    - field.field.paragraph.px_sencillo.field_px_acordion_simple
+    - field.field.paragraph.px_sencillo.field_px_body
+    - field.field.paragraph.px_sencillo.field_px_body_format
+    - field.field.paragraph.px_sencillo.field_px_img
+    - field.field.paragraph.px_sencillo.field_px_title
+    - field.field.paragraph.px_sencillo.field_px_title_cond
+    - paragraphs.paragraphs_type.px_sencillo
+  module:
+    - image
+    - text
+id: paragraph.px_sencillo.default
+targetEntityType: paragraph
+bundle: px_sencillo
+mode: default
+content:
+  field_px_acordion:
+    weight: 7
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_px_acordion_cuerpo:
+    weight: 5
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_px_acordion_simple:
+    weight: 4
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_px_body:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_px_body_format:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_px_img:
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_px_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_px_title_cond:
+    weight: 3
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+hidden: {  }

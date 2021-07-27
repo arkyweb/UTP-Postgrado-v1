@@ -1,0 +1,29 @@
+uuid: 7cbcb650-33dc-4b20-9fab-86dba06227af
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_px_acordion
+    - paragraphs.paragraphs_type.px_sencillo
+    - taxonomy.vocabulary.tx_acordiones
+id: paragraph.px_sencillo.field_px_acordion
+field_name: field_px_acordion
+entity_type: paragraph
+bundle: px_sencillo
+label: 'Tipo de Acordion'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tx_acordiones: tx_acordiones
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

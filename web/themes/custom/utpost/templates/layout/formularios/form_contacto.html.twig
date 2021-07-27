@@ -1,0 +1,37 @@
+<div id="contacto" class="uk-modal-full" uk-modal>
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-full uk-close-large boton_close" type="button" uk-close></button>
+        <h4>Solicita más información</h4>
+        <form id="utpost_contacto" method="post">
+          <div class="form_nombre">
+            <input id="nombre_contacto" name="nombre_contacto" class="input_text" type="text" placeholder="Nombre Completo" aria-label="Nombre Completo">
+          </div>
+          <div class="form_correo">
+            <input id="correo_contacto" name="correo_contacto" class="input_text" type="email" placeholder="Correo electrónico" aria-label="Correo Electronico">
+          </div>
+          <div class="form_dni">
+            <input id="dni_contacto" name="dni_contacto" class="input_text" type="tel" placeholder="DNI" aria-label="DNI">
+          </div>
+          <div class="form_celular">
+            <input id="celular_contacto" name="celular_contacto" class="input_text" type="tel" placeholder="Celular" aria-label="Celular">
+          </div>
+          <div class="form_lugar">
+            <input id="lugar_contacto" name="lugar_contacto" class="input_text" type="text" placeholder="Lugar de Residencia" aria-label="Lugar de Residencia">
+          </div>
+          <div class="form_autorizo">
+            <label for="autorizo_contacto">
+              <input id="autorizo_contacto" name="autorizo_contacto" class="input_checkbox" aria-label="Autorizo" type="checkbox" checked="">
+              {{ autorizacion }}
+            </label>
+          </div>
+          <div class="form_publicidad">
+            <label for="publicidad_contacto">
+              <input id="publicidad_contacto" name="publicidad_contacto" class="input_checkbox" aria-label="Publicidad" type="checkbox" checked="">
+              {{ publicidad }}<br>
+              <a href="">Ver políticas de privacidad</a>
+            </label>
+          </div>
+          <button id="go_contacto" class="boton_calato" aria-label="go_subs">Enviar</button>
+        </form>
+    </div>
+</div>

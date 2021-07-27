@@ -1,0 +1,5 @@
+name: 'UTPost Fast Search'
+type: module
+description: 'Buscador Rápido de Productos'
+core: 8.x
+core_version_requirement: '^8 || ^9'

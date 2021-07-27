@@ -1,0 +1,32 @@
+<section id="redes" class="redes">
+<div class="container">
+  <div class="columnas">
+    <div class="col_3 order-desktop">
+      <h5>Portal de Transparencia:</h5>
+      <a href="{{ transparencia }}" target="_blank" rel="nofollow noreferrer">
+        <img data-src="{{ transparencia_img }}" uk-img alt="Portal de Transparencia" />
+      </a>
+    </div>
+    <div class="col_full">
+      <div class="columnas">
+        <div class="col_2 order-desktop">
+          <h6>Contacto</h6>
+          <p><a href="tel:{{ telefono }}" rel="nofollow noreferrer" target="_blank">{{ telefono }}</a></p>
+          <p>{{ direccion }}</p>
+        </div>
+        <div class="col_2">
+          <h5>Síguenos en Redes Sociales</h5>
+          <ul>
+            {% if rrss_0 %}<li><a href="{{ rrss_0 }}" target="_blank" rel="nofollow noreferrer">{{ rrss_0_svg }}</a></li>{% endif %}
+            {% if rrss_1 %}<li><a href="{{ rrss_1 }}" target="_blank" rel="nofollow noreferrer">{{ rrss_1_svg }}</a></li>{% endif %}
+            {% if rrss_2 %}<li><a href="{{ rrss_2 }}" target="_blank" rel="nofollow noreferrer">{{ rrss_2_svg }}</a></li>{% endif %}
+            {% if rrss_3 %}<li><a href="{{ rrss_3 }}" target="_blank" rel="nofollow noreferrer">{{ rrss_3_svg }}</a></li>{% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+{{ field_val }}

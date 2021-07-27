@@ -1,0 +1,13 @@
+{% if logged_in %}
+<article{{ attributes }}>
+{{ title_prefix }}
+{{ title_suffix }}
+{% endif %}
+
+{% include '@utpost/node/elements/util.html.twig' ignore missing %}
+
+{{ content }}
+
+{% if logged_in %}
+</article>
+{% endif %}

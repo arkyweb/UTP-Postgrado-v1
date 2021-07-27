@@ -1,0 +1,10 @@
+uuid: cd092b34-7d60-47e5-b62e-e6288f5efce7
+langcode: es
+status: true
+dependencies: {  }
+id: px_block
+label: Bloque
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

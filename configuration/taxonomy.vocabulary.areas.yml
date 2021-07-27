@@ -1,0 +1,8 @@
+uuid: 7da25c43-e1b2-4665-a233-3f28492b3312
+langcode: es
+status: true
+dependencies: {  }
+name: 'Areas UTP'
+vid: areas
+description: ''
+weight: 0

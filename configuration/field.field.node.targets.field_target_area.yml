@@ -1,0 +1,29 @@
+uuid: eca3e364-b2f9-4b6e-a52c-073fb3783741
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_target_area
+    - node.type.targets
+    - taxonomy.vocabulary.areas
+id: node.targets.field_target_area
+field_name: field_target_area
+entity_type: node
+bundle: targets
+label: 'Áreas de Extensión'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      areas: areas
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

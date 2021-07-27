@@ -1,0 +1,10 @@
+uuid: 21919565-f7be-46d6-a695-607271d5cd06
+langcode: es
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.bloque
+label: Bloque
+targetEntityType: paragraph
+cache: true

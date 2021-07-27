@@ -1,0 +1,29 @@
+uuid: 04e276ee-bf2b-492a-92cf-167c9a5bfac6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_target_point
+    - node.type.targets
+    - taxonomy.vocabulary.tags
+id: node.targets.field_target_point
+field_name: field_target_point
+entity_type: node
+bundle: targets
+label: 'Categoría del Producto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

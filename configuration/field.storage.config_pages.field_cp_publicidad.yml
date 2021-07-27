@@ -1,0 +1,21 @@
+uuid: 50a2a040-b89d-4905-b1f8-3700e1e91c86
+langcode: es
+status: true
+dependencies:
+  module:
+    - config_pages
+id: config_pages.field_cp_publicidad
+field_name: field_cp_publicidad
+entity_type: config_pages
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

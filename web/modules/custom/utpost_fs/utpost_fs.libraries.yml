@@ -1,0 +1,4 @@
+utpost_fs:
+  version: 1.0.0
+  js:
+    js/fs.js

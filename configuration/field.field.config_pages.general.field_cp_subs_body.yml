@@ -1,0 +1,19 @@
+uuid: 1f42ff5f-92c6-47b6-bde5-f316e940bcd7
+langcode: es
+status: true
+dependencies:
+  config:
+    - config_pages.type.general
+    - field.storage.config_pages.field_cp_subs_body
+id: config_pages.general.field_cp_subs_body
+field_name: field_cp_subs_body
+entity_type: config_pages
+bundle: general
+label: 'Cuerpo de Subscripción'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

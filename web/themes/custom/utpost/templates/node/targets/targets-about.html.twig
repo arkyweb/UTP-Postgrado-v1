@@ -1,0 +1,7 @@
+{% if node.field_target_about.value|length > 0 %}
+{% for titular in node.field_target_about %}
+<section id="sobre" class="bloque titulares">
+    {% include '@utpost/node/parrafos/titular.html.twig' ignore missing %}
+</section>
+{% endfor %}
+{% endif %}

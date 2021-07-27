@@ -1,0 +1,19 @@
+uuid: 27a23865-60f3-4127-bb9f-5b52032981cd
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_linkedin
+    - node.type.docentes
+id: node.docentes.field_linkedin
+field_name: field_linkedin
+entity_type: node
+bundle: docentes
+label: Linkedin
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

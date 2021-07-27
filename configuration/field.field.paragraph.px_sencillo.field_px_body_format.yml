@@ -1,0 +1,21 @@
+uuid: 4b0b29e1-cf06-44ad-b5e2-990c5a9772e2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_px_body_format
+    - paragraphs.paragraphs_type.px_sencillo
+  module:
+    - text
+id: paragraph.px_sencillo.field_px_body_format
+field_name: field_px_body_format
+entity_type: paragraph
+bundle: px_sencillo
+label: 'Cuerpo con Formato'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,40 @@
+uuid: 2658162d-1c2e-41ab-8bcd-281fe9419048
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.buildings.body
+    - field.field.node.buildings.field_bloque
+    - node.type.buildings
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.buildings.default
+targetEntityType: node
+bundle: buildings
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_bloque:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

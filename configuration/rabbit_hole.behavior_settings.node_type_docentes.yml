@@ -1,0 +1,14 @@
+uuid: e43de30e-808c-4fbc-90e5-69e1bdc62ed7
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.docentes
+id: node_type_docentes
+entity_type_id: node_type
+entity_id: docentes
+action: page_redirect
+allow_override: 1
+redirect: /<front>
+redirect_code: 301
+redirect_fallback_action: access_denied

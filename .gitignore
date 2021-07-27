@@ -1,12 +1,24 @@
 # Ignore configuration files that may contain sensitive information.
-sites/*/*settings*.php
-sites/example.sites.php
+/web/sites/*/*settings*.php
+/web/sites/example.sites.php
 
 # Ignore paths that contain generated content.
 files/
-sites/*/files
-sites/*/private
-sites/*/translations
+/web/sites/*/files
+/web/sites/*/private
+/web/sites/*/translations
+/vendor
+/web/core
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/
+
+# Ignore Drupal's file directory
+/web/sites/*/files/php
+/web/sites/*/files/css
+/web/sites/*/files/js
+/web/sites/*/files/module_builder_data
+/web/autoload.php
 
 # Ignore default text files
 robots.txt
@@ -37,3 +49,33 @@ xmlrpc.php
 /profiles
 /scripts
 /themes
+
+# Applications
+*.app
+*.exe
+*.war
+
+# Large media files
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
+
+# Ignore .env files as they are personal
+/.env
+.editorconfig
+.gitattributes
+.ORIGINAL
+*.pdf
+*.sql
+*.gif
+*.mp4
+*.ini
+*.zip
+*.example
+
+# Node artifact files
+node_modules/
+dist/

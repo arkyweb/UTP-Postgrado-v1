@@ -1,0 +1,17 @@
+{% if node.field_target_docentes.0.value|length > 0 %}
+<section id="docentes" class="docentes">
+
+<header>
+  <h3 class="titular">Docentes</h3>
+</header>
+<ul uk-accordion>
+  {% for key, docentes in content.field_target_docentes if key|first != '#' %}
+    <li {% if loop.first %}class="uk-open"{% endif %}>{{ docentes }}</li>
+  {% endfor %}
+</ul>
+<footer>
+  <a class="boton_calato" href="{{ base_path }}docentes">Conoce a nuestros docentes</a>
+</footer>
+
+</section>
+{% endif %}

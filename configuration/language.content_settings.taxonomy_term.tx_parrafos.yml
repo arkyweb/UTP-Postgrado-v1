@@ -1,0 +1,11 @@
+uuid: b58a6434-42df-434e-b8e9-670064d0e52e
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tx_parrafos
+id: taxonomy_term.tx_parrafos
+target_entity_type_id: taxonomy_term
+target_bundle: tx_parrafos
+default_langcode: site_default
+language_alterable: false

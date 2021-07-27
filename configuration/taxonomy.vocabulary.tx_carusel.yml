@@ -1,0 +1,8 @@
+uuid: 3b9239df-6723-4de5-b294-65fe2cf42775
+langcode: es
+status: true
+dependencies: {  }
+name: Carusel
+vid: tx_carusel
+description: ''
+weight: 0

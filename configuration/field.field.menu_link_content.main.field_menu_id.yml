@@ -1,0 +1,19 @@
+uuid: 825de43b-80aa-4af8-bef3-b1a50f3abafa
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.menu_link_content.field_menu_id
+    - system.menu.main
+id: menu_link_content.main.field_menu_id
+field_name: field_menu_id
+entity_type: menu_link_content
+bundle: main
+label: 'Menu ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

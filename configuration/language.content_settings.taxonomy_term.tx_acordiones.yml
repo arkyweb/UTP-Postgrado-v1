@@ -1,0 +1,11 @@
+uuid: 93df8256-64d4-4563-b6f3-4a844cdba4a2
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tx_acordiones
+id: taxonomy_term.tx_acordiones
+target_entity_type_id: taxonomy_term
+target_bundle: tx_acordiones
+default_langcode: site_default
+language_alterable: false

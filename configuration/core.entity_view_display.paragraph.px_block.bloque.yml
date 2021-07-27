@@ -1,0 +1,37 @@
+uuid: 63aba33a-6245-445a-9aeb-c17fcc994aea
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.bloque
+    - field.field.paragraph.px_block.field_px_carousel
+    - field.field.paragraph.px_block.field_px_columns
+    - field.field.paragraph.px_block.field_px_drupal
+    - field.field.paragraph.px_block.field_px_group
+    - field.field.paragraph.px_block.field_px_header
+    - field.field.paragraph.px_block.field_px_id
+    - field.field.paragraph.px_block.field_px_px
+    - field.field.paragraph.px_block.field_px_title
+    - paragraphs.paragraphs_type.px_block
+  module:
+    - block_field
+id: paragraph.px_block.bloque
+targetEntityType: paragraph
+bundle: px_block
+mode: bloque
+content:
+  field_px_drupal:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: block_field
+    region: content
+hidden:
+  field_px_carousel: true
+  field_px_columns: true
+  field_px_group: true
+  field_px_header: true
+  field_px_id: true
+  field_px_px: true
+  field_px_title: true

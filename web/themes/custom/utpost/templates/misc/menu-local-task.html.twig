@@ -1,0 +1,7 @@
+{% set link = link|merge ({ 
+    '#attributes': {
+    'class': [ 'uk-button', 'uk-button-primary' ]
+}
+})
+%}
+<li{{ attributes.addClass(is_active ? 'active', 'uk-item') }}>{{ link }}</li>

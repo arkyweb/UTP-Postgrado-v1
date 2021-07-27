@@ -1,0 +1,197 @@
+uuid: 8107831f-9e63-44ee-8318-43372059dd4c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.px_carousel.field_px_bchivos
+    - field.field.paragraph.px_carousel.field_px_bcuerpo
+    - field.field.paragraph.px_carousel.field_px_blinks
+    - field.field.paragraph.px_carousel.field_px_body_format
+    - field.field.paragraph.px_carousel.field_px_chivos
+    - field.field.paragraph.px_carousel.field_px_img
+    - field.field.paragraph.px_carousel.field_px_link
+    - field.field.paragraph.px_carousel.field_px_tcarousel
+    - field.field.paragraph.px_carousel.field_px_title
+    - field.field.paragraph.px_carousel.field_px_title_add
+    - field.field.paragraph.px_carousel.field_px_youtube
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.px_carousel
+  module:
+    - field_states_ui
+    - file
+    - image
+    - link
+    - text
+id: paragraph.px_carousel.default
+targetEntityType: paragraph
+bundle: px_carousel
+mode: default
+content:
+  field_px_bcuerpo:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_px_blinks:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_px_body_format:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list:
+            04dee7b9-1e47-4b22-9674-a5f70966a673:
+              operations:
+                edit: Editar
+                delete: Eliminar
+          add: Agregar
+        field_states:
+          04dee7b9-1e47-4b22-9674-a5f70966a673:
+            uuid: 04dee7b9-1e47-4b22-9674-a5f70966a673
+            id: invisible
+            data:
+              target: field_px_bcuerpo
+              comparison: unchecked
+              value: ''
+              submit: 'Update State Cancelar'
+    type: text_textarea
+    region: content
+  field_px_chivos:
+    weight: 7
+    settings:
+      progress_indicator: throbber
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list: ''
+          add: Agregar
+    type: file_generic
+    region: content
+  field_px_img:
+    weight: 8
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_px_link:
+    weight: 6
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list:
+            134c36b5-4054-4680-bcbe-2a58ac030aa1:
+              operations:
+                edit: Editar
+                delete: Eliminar
+            95cdc3be-bcb2-46db-9943-d9352647109c:
+              operations:
+                edit: Editar
+                delete: Eliminar
+          add: Agregar
+        field_states:
+          134c36b5-4054-4680-bcbe-2a58ac030aa1:
+            uuid: 134c36b5-4054-4680-bcbe-2a58ac030aa1
+            id: invisible
+            data:
+              target: field_px_tcarousel
+              comparison: value
+              value: '25'
+              submit: 'Agregar Cancelar'
+          95cdc3be-bcb2-46db-9943-d9352647109c:
+            uuid: 95cdc3be-bcb2-46db-9943-d9352647109c
+            id: invisible
+            data:
+              target: field_px_blinks
+              comparison: unchecked
+              value: ''
+              submit: 'Agregar Cancelar'
+    type: link_default
+    region: content
+  field_px_tcarousel:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_px_title:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list:
+            6c404b56-074a-43a1-a9a6-8bf28add4160:
+              operations:
+                edit: Editar
+                delete: Eliminar
+          add: Agregar
+        field_states:
+          6c404b56-074a-43a1-a9a6-8bf28add4160:
+            uuid: 6c404b56-074a-43a1-a9a6-8bf28add4160
+            id: invisible
+            data:
+              target: field_px_tcarousel
+              comparison: value
+              value: '25'
+              submit: 'Agregar Cancelar'
+    type: string_textfield
+    region: content
+  field_px_title_add:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_px_youtube:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list:
+            b36a7ce6-f1cd-48f5-999a-a22235d5013c:
+              operations:
+                edit: Editar
+                delete: Eliminar
+          add: Agregar
+        field_states:
+          b36a7ce6-f1cd-48f5-999a-a22235d5013c:
+            uuid: b36a7ce6-f1cd-48f5-999a-a22235d5013c
+            id: visible
+            data:
+              target: field_px_tcarousel
+              comparison: value
+              value: '25'
+              submit: 'Agregar Cancelar'
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  field_px_bchivos: true
+  status: true

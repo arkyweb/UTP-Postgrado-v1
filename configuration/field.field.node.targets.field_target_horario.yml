@@ -1,0 +1,19 @@
+uuid: ab50842f-fbda-42a8-aa86-3a559ac2a626
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_target_horario
+    - node.type.targets
+id: node.targets.field_target_horario
+field_name: field_target_horario
+entity_type: node
+bundle: targets
+label: Horario
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

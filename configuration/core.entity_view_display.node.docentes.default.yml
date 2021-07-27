@@ -1,0 +1,65 @@
+uuid: 9c575537-782a-4641-a7b1-1f1b9ecdc5fe
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.docentes.body
+    - field.field.node.docentes.field_descripcion
+    - field.field.node.docentes.field_foto
+    - field.field.node.docentes.field_linkedin
+    - field.field.node.docentes.field_perfil_apellidos
+    - field.field.node.docentes.field_perfil_nombres
+    - node.type.docentes
+  module:
+    - image
+    - text
+    - user
+id: node.docentes.default
+targetEntityType: node
+bundle: docentes
+mode: default
+content:
+  field_descripcion:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_foto:
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_linkedin:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_perfil_apellidos:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_perfil_nombres:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  body: true
+  langcode: true
+  links: true

@@ -1,0 +1,157 @@
+uuid: 8f15688c-a584-44e9-a4de-ec0076071304
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.px_sencillo.field_px_acordion
+    - field.field.paragraph.px_sencillo.field_px_acordion_cuerpo
+    - field.field.paragraph.px_sencillo.field_px_acordion_simple
+    - field.field.paragraph.px_sencillo.field_px_body
+    - field.field.paragraph.px_sencillo.field_px_body_format
+    - field.field.paragraph.px_sencillo.field_px_img
+    - field.field.paragraph.px_sencillo.field_px_title
+    - field.field.paragraph.px_sencillo.field_px_title_cond
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.px_sencillo
+  module:
+    - field_states_ui
+    - image
+    - text
+id: paragraph.px_sencillo.default
+targetEntityType: paragraph
+bundle: px_sencillo
+mode: default
+content:
+  field_px_acordion:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_px_body:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list:
+            3f5217f7-132e-41e1-9c88-8f2ebc2fdb9f:
+              operations:
+                edit: Editar
+                delete: Eliminar
+          add: Agregar
+        field_states:
+          3f5217f7-132e-41e1-9c88-8f2ebc2fdb9f:
+            uuid: 3f5217f7-132e-41e1-9c88-8f2ebc2fdb9f
+            id: invisible
+            data:
+              target: field_px_acordion
+              comparison: value
+              value: '23'
+              submit: 'Agregar Cancelar'
+    type: string_textarea
+    region: content
+  field_px_body_format:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list:
+            2843ab38-1c1a-49d8-8852-5da295fc94ff:
+              operations:
+                edit: Editar
+                delete: Eliminar
+            87d24f95-876d-4d9d-8295-47a4d643575e:
+              operations:
+                edit: Editar
+                delete: Eliminar
+          add: Agregar
+        field_states:
+          2843ab38-1c1a-49d8-8852-5da295fc94ff:
+            uuid: 2843ab38-1c1a-49d8-8852-5da295fc94ff
+            id: invisible
+            data:
+              target: field_px_acordion
+              comparison: value
+              value: '22'
+              submit: 'Agregar Cancelar'
+          87d24f95-876d-4d9d-8295-47a4d643575e:
+            uuid: 87d24f95-876d-4d9d-8295-47a4d643575e
+            id: invisible
+            data:
+              target: field_px_acordion
+              comparison: value
+              value: _none
+              submit: 'Agregar Cancelar'
+    type: text_textarea
+    region: content
+  field_px_img:
+    weight: 5
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list: ''
+          add: Agregar
+    type: image_image
+    region: content
+  field_px_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_px_title_cond:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list:
+            db87e233-5ba5-4150-9799-9d0b7138cf4f:
+              operations:
+                edit: Editar
+                delete: Eliminar
+            6581d2de-65d9-49ff-80e4-6285670a846d:
+              operations:
+                edit: Editar
+                delete: Eliminar
+          add: Agregar
+        field_states:
+          db87e233-5ba5-4150-9799-9d0b7138cf4f:
+            uuid: db87e233-5ba5-4150-9799-9d0b7138cf4f
+            id: invisible
+            data:
+              target: field_px_acordion
+              comparison: value
+              value: '22'
+              submit: 'Agregar Cancelar'
+          6581d2de-65d9-49ff-80e4-6285670a846d:
+            uuid: 6581d2de-65d9-49ff-80e4-6285670a846d
+            id: invisible
+            data:
+              target: field_px_acordion
+              comparison: value
+              value: '23'
+              submit: 'Agregar Cancelar'
+    type: boolean_checkbox
+    region: content
+hidden:
+  created: true
+  field_px_acordion_cuerpo: true
+  field_px_acordion_simple: true
+  status: true

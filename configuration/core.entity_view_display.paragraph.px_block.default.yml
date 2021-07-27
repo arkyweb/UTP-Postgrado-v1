@@ -1,0 +1,91 @@
+uuid: 74548801-3a1b-419a-90f2-8d8c312a1e5a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.px_block.field_px_carousel
+    - field.field.paragraph.px_block.field_px_columns
+    - field.field.paragraph.px_block.field_px_drupal
+    - field.field.paragraph.px_block.field_px_group
+    - field.field.paragraph.px_block.field_px_header
+    - field.field.paragraph.px_block.field_px_id
+    - field.field.paragraph.px_block.field_px_px
+    - field.field.paragraph.px_block.field_px_title
+    - paragraphs.paragraphs_type.px_block
+  module:
+    - block_field
+    - entity_reference_revisions
+id: paragraph.px_block.default
+targetEntityType: paragraph
+bundle: px_block
+mode: default
+content:
+  field_px_carousel:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_px_columns:
+    weight: 7
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_px_drupal:
+    weight: 8
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: block_field
+    region: content
+  field_px_group:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_px_header:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_px_id:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_px_px:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_px_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

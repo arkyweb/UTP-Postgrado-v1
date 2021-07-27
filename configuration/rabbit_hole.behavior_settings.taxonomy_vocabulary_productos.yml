@@ -1,0 +1,14 @@
+uuid: 1f08d9b2-41a5-4701-9c37-3ad24379e278
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.productos
+id: taxonomy_vocabulary_productos
+entity_type_id: taxonomy_vocabulary
+entity_id: productos
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

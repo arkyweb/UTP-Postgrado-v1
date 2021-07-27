@@ -1,0 +1,33 @@
+uuid: c54624e5-2fa4-403f-bad2-9d593af8dbb5
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.menu_link_content.pdf
+    - field.field.menu_link_content.main.field_menu_id
+    - field.field.menu_link_content.main.field_menu_pdf
+    - field.field.menu_link_content.main.field_menu_title
+    - system.menu.main
+  module:
+    - file
+id: menu_link_content.main.pdf
+targetEntityType: menu_link_content
+bundle: main
+mode: pdf
+content:
+  children:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_menu_pdf:
+    type: file_url_plain
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_menu_id: true
+  field_menu_title: true
+  langcode: true

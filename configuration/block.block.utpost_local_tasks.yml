@@ -1,0 +1,22 @@
+uuid: a0913190-aa32-4675-b441-13c43b444740
+langcode: es
+status: true
+dependencies:
+  theme:
+    - utpost
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: utpost_local_tasks
+theme: utpost
+region: disabled_area
+weight: 1
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Pestañas
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

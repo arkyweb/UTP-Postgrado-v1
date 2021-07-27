@@ -1,0 +1,37 @@
+uuid: 8e0e2024-a379-4416-92ce-8212b7971858
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_px_px
+    - paragraphs.paragraphs_type.px_block
+    - paragraphs.paragraphs_type.px_sencillo
+  module:
+    - entity_reference_revisions
+id: paragraph.px_block.field_px_px
+field_name: field_px_px
+entity_type: paragraph
+bundle: px_block
+label: 'Parrafo necesitado'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      px_sencillo: px_sencillo
+    target_bundles_drag_drop:
+      px_block:
+        weight: 3
+        enabled: false
+      px_header:
+        weight: 5
+        enabled: false
+      px_sencillo:
+        enabled: true
+        weight: 4
+field_type: entity_reference_revisions

@@ -1,0 +1,6 @@
+<link rel="preload" href="{{ base_path }}themes/custom/utpost/assets/css/css.general.css" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ base_path }}themes/custom/utpost/assets/css/css.general.css"></noscript>
+{% if node.getType in ['targets'] %}
+<link rel="preload" href="{{ base_path }}themes/custom/utpost/assets/css/css.target.css" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ base_path }}themes/custom/utpost/assets/css/css.target.css"></noscript>
+{% endif %}

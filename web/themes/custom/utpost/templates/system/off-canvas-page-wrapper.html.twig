@@ -1,0 +1,11 @@
+{% if children %}
+
+{% if logged_in %}
+<div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+{{ children }}
+</div>
+{% else %}
+{{ children }}
+{% endif %}
+
+{% endif %}

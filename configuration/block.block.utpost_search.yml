@@ -1,0 +1,23 @@
+uuid: c6a7499e-8425-4205-b042-821e13a108ef
+langcode: es
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - utpost
+_core:
+  default_config_hash: Q-4EcGAsu26ICu4ejEz0uE1zv4akpiaOsizxgZfAmEw
+id: utpost_search
+theme: utpost
+region: disabled_area
+weight: -6
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Buscar
+  provider: search
+  label_display: visible
+  page_id: node_search
+visibility: {  }

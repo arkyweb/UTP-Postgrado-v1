@@ -1,0 +1,4 @@
+<img data-src="{{ foto }}" alt="{{ nombres }} {{ apellidos }}" width="200" height="200" uk-img />
+<h4>{{ nombres }} {{ apellidos }}</h4>
+{% if descripcion %} {{ descripcion|raw }} {% endif %}
+{% if linkedin %}<a href="{{ linkedin }}" target="_blank" rel="nofollow noreferrer" class="boton_menu">LN</a>{% endif %}

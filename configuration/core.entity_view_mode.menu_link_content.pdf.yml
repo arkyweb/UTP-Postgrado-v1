@@ -1,0 +1,10 @@
+uuid: c759a8da-cc6e-4f60-8ed9-1ae71d701cf8
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_link_content
+id: menu_link_content.pdf
+label: PDF
+targetEntityType: menu_link_content
+cache: true

@@ -1,0 +1,23 @@
+uuid: 1906b5db-ebd7-41ac-ac37-b7e8accf0e56
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_px_link
+    - paragraphs.paragraphs_type.px_header
+  module:
+    - link
+id: paragraph.px_header.field_px_link
+field_name: field_px_link
+entity_type: paragraph
+bundle: px_header
+label: Enlace
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

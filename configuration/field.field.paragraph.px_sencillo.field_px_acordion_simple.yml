@@ -1,0 +1,23 @@
+uuid: 919c87fd-8a25-41a0-a666-b8b31d704b44
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_px_acordion_simple
+    - paragraphs.paragraphs_type.px_sencillo
+id: paragraph.px_sencillo.field_px_acordion_simple
+field_name: field_px_acordion_simple
+entity_type: paragraph
+bundle: px_sencillo
+label: 'Acordion Simple'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

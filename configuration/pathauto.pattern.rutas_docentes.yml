@@ -1,0 +1,22 @@
+uuid: e6aa92b3-bab2-4b50-8fe3-3cd980c2a51a
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: rutas_docentes
+label: 'Rutas Docentes'
+type: 'canonical_entities:node'
+pattern: 'docentes/[node:title]'
+selection_criteria:
+  726b4576-0d25-4c9b-b22f-26dd2dbdb44a:
+    id: node_type
+    bundles:
+      docentes: docentes
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 726b4576-0d25-4c9b-b22f-26dd2dbdb44a
+selection_logic: and
+weight: -5
+relationships: {  }

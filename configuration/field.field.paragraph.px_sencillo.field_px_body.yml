@@ -1,0 +1,19 @@
+uuid: b508f0f4-1ed0-4f59-92ce-05ba6d14c562
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_px_body
+    - paragraphs.paragraphs_type.px_sencillo
+id: paragraph.px_sencillo.field_px_body
+field_name: field_px_body
+entity_type: paragraph
+bundle: px_sencillo
+label: Cuerpo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

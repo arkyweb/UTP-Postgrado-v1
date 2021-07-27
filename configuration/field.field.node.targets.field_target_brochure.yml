@@ -1,0 +1,27 @@
+uuid: fcbf1a2e-982b-4247-94cd-51dc2ca36720
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_target_brochure
+    - node.type.targets
+  module:
+    - file
+id: node.targets.field_target_brochure
+field_name: field_target_brochure
+entity_type: node
+bundle: targets
+label: Brochure
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: pdf/targets/brochure
+  file_extensions: 'pdf txt'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

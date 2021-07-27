@@ -1,0 +1,120 @@
+{% set titulo_0 = carousel.entity.field_px_title.0.value %}
+{% set titulo_1 = carousel.entity.field_px_title.1.value %}
+{% set titulo_2 = carousel.entity.field_px_title.2.value %}
+{% set adicional = carousel.entity.field_px_title_add.0.value %}
+{% set enlace = carousel.entity.field_px_link.0 %}
+{% set imagen_0 = carousel.entity.field_px_img.0 %}
+{% set youtube = carousel.entity.field_px_youtube.0.value %}
+{% set formateado = carousel.entity.field_px_body_format.0.value %}
+
+{% if carousel.entity.field_px_tcarousel.0.target_id in ['25'] %} {# testimomios targets #}
+
+<div class="columnas">
+
+<div class="col_2">
+  <header>
+    <h3>Siempre Conectados</h3>
+  </header>
+  <article>
+    {% if adicional|length > 0 %}{{ adicional }}{% endif %}
+    {% if formateado|length > 0 %}{{ formateado|raw }}{% endif %}
+  </article>
+</div>
+
+{% if imagen_0.value|length > 0 %}
+<div class="col_2">
+  {% if youtube|length > 0 %}
+  <button uk-toggle="target: #testimonio" aria-label="Abrir Testimonio">
+  {% endif %}
+    <img class="img_full" data-src="{{ file_url(imagen_0.entity.fileuri) }}" alt="{{ imagen_0.alt }}" uk-img />
+  {% if youtube|length > 0 %}
+  </button>
+  {% endif %}
+</div>
+{% endif %}
+
+</div>
+
+<div id="testimonio" class="modal-all" uk-modal>
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-outside" type="button" uk-close></button>
+        <iframe src="https://www.youtube-nocookie.com/embed/{{ youtube }}" width="1920" height="1080" frameborder="0" uk-video uk-responsive>
+        </iframe>
+    </div>
+</div>
+
+{% elseif carousel.entity.field_px_tcarousel.0.target_id in ['26'] %} {# cuerpo formateado #}
+
+<div class="columnas">
+
+<div class="col_2">
+  {% if titulo_0|length > 0 %}
+  <header>
+    <h3>
+      {{ titulo_0 }}
+      {% if titulo_1|length > 0 %}<br>{{ titulo_1 }}{% endif %}
+      {% if titulo_2|length > 0 %}<br>{{ titulo_2 }}{% endif %}
+      {% if adicional|length > 0 %}<br>{{ adicional }}{% endif %}
+    </h3>
+  </header>
+  {% endif %}
+  {% if formateado|length > 0 %}
+  <article>
+    {% if formateado|length > 0 %}{{ formateado|raw }}{% endif %}
+  </article>
+  {% endif %}
+  {% if enlace.value|length > 0 %}
+  <a class="enlace_boton" href="{{ enlace.url }}">{{ enlace.title }}</a>
+  {% endif %}
+  {% if carousel.entity.field_px_chivos.0.value|length > 0 %}
+    {% for chivos in carousel.entity.field_px_chivos %}
+    <a href="{{ file_url(chivos.entity.uri.value) }}" class="boton_calato" target="_blank">
+      {{ chivos.description }}
+    </a>
+    {% endfor %}
+  {% endif %}
+</div>
+
+{% if imagen_0.value|length > 0 %}
+<div class="col_2">
+    <img class="img_full" data-src="{{ file_url(imagen_0.entity.fileuri) }}" alt="{{ imagen_0.alt }}" uk-img />
+</div>
+{% endif %}
+
+</div>
+
+{% else %}
+
+<li>
+
+<div class="columnas">
+  {% if titulo_0|length > 0 %}
+    <div class="col_2">
+
+      {% if not is_front %}
+      <h1 class="titular_slider">
+      {% else %}
+      <h2 class="titular_slider">
+      {% endif %}
+        {{ titulo_0 }}
+        {% if titulo_1|length > 0 %}<br>{{ titulo_1 }}{% endif %}
+        {% if titulo_2|length > 0 %}<br>{{ titulo_2 }}{% endif %}
+        {% if adicional|length > 0 %}<br>{{ adicional }}{% endif %}
+      {% if not is_front %}</h1>{% else %}</h2>{% endif %}
+
+      {% if enlace.value|length > 0 %}
+      <a class="enlace_boton" href="{{ enlace.url }}">{{ enlace.title }}</a>
+      {% endif %}
+
+    </div>
+  {% endif %}
+
+  {% if imagen_0.value|length > 0 %}
+    <div class="col_2" uk-height-match>
+      <img class="img_full" data-src="{{ file_url(imagen_0.entity.fileuri) }}" alt="{{ imagen_0.alt }}" uk-img />
+    </div>
+  {% endif %}
+</div>
+
+</li>
+{% endif %}

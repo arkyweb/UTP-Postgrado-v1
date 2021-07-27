@@ -1,0 +1,21 @@
+uuid: 53d5a22d-64c2-4177-a61b-f119ba35f5d3
+langcode: es
+status: true
+dependencies:
+  module:
+    - config_pages
+id: config_pages.field_cp_telefono
+field_name: field_cp_telefono
+entity_type: config_pages
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

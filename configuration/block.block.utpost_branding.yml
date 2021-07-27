@@ -1,0 +1,25 @@
+uuid: 7c3e6624-26c3-40c6-ba8d-563aa210503c
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - utpost
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: utpost_branding
+theme: utpost
+region: disabled_area
+weight: -4
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Marca del sitio'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

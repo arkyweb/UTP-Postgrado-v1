@@ -1,0 +1,27 @@
+no_change:
+  ignore: true
+  delete: ''
+base_fields:
+  uid: true
+  name: true
+  pass: true
+  mail: true
+  timezone: true
+  status: true
+  roles: true
+  created: true
+  changed: true
+  access: true
+  login: true
+  init: true
+  langcode: true
+  preferred_langcode: true
+  preferred_admin_langcode: true
+attached_fields: {  }
+archive:
+  directory: ''
+  filename: ''
+  max_cardinality: 1
+_core:
+  default_config_hash: 7x4Id7UmVM2gveKeNQzXqu8uOVH5HcLVJx-u7mUL8Jc
+langcode: es

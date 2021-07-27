@@ -1,0 +1,23 @@
+uuid: fe52d435-9c98-4c25-ab70-51409c40b9af
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_px_title_cond
+    - paragraphs.paragraphs_type.px_sencillo
+id: paragraph.px_sencillo.field_px_title_cond
+field_name: field_px_title_cond
+entity_type: paragraph
+bundle: px_sencillo
+label: 'Primera Línea Mayor'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

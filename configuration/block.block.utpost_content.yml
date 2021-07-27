@@ -1,0 +1,22 @@
+uuid: c8b91077-6f06-4cb1-b9fe-0c387e99c6de
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - utpost
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: utpost_content
+theme: utpost
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenido principal de la página'
+  provider: system
+  label_display: '0'
+visibility: {  }

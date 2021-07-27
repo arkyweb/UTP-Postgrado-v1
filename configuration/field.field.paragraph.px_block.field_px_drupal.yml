@@ -1,0 +1,29 @@
+uuid: de00e4b9-8f4c-40bf-8e4d-6da8eef1fc29
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_px_drupal
+    - paragraphs.paragraphs_type.px_block
+  module:
+    - block_field
+id: paragraph.px_block.field_px_drupal
+field_name: field_px_drupal
+entity_type: paragraph
+bundle: px_block
+label: 'Bloque Drupal'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids:
+      system_main_block: system_main_block
+      system_powered_by_block: system_powered_by_block
+      system_branding_block: system_branding_block
+      system_messages_block: system_messages_block
+      utpost_fs: utpost_fs
+field_type: block_field

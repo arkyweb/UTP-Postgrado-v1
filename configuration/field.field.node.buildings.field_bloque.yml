@@ -1,0 +1,34 @@
+uuid: 561a1d01-4064-4428-8fcf-ce8aec0b693a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bloque
+    - node.type.buildings
+    - paragraphs.paragraphs_type.px_block
+  module:
+    - entity_reference_revisions
+id: node.buildings.field_bloque
+field_name: field_bloque
+entity_type: node
+bundle: buildings
+label: Bloque
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      px_block: px_block
+    target_bundles_drag_drop:
+      px_block:
+        enabled: true
+        weight: 3
+      px_sencillo:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

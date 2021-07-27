@@ -1,0 +1,19 @@
+.target_presentacion::before {
+    content: '';
+    background: black;
+    height: 100%;
+    left: calc(-1*calc(3rem + 3vw));
+    width: calc(3rem + 3vw);
+    position: absolute;
+    top: 0;
+}
+@media (min-width: 1400px) {
+.target_presentacion::before{
+  left: calc(-1*calc(50vw + 4rem - 700px));
+  width: calc(50vw + 4rem - 700px);
+}
+}
+
+.target_aside li {
+    margin-top: 1rem;
+}

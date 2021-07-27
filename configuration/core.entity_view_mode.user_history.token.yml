@@ -1,0 +1,10 @@
+uuid: 56f4f27c-528e-49cd-988d-2e2affc356c8
+langcode: es
+status: true
+dependencies:
+  module:
+    - user_history
+id: user_history.token
+label: Token
+targetEntityType: user_history
+cache: true

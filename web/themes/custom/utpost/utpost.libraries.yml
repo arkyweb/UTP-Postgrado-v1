@@ -1,0 +1,19 @@
+utpost:
+  js:
+    #cdnjs.cloudflare.com/ajax/libs/uikit/3.7.0/js/uikit.min.js: { weight: -22, attributes: { defer: true, async: true } }
+    assets/js/uk.min.js: { weight: -22, attributes: { defer: true, async: true } }
+    assets/js/js.general.js: { weight: -21, attributes: { defer: true, async: true } }
+
+load:
+  header: true
+  js:
+    assets/js/load.js: { weight: -23, attributes: { defer: true, async: true } }
+
+logeado:
+  css:
+    theme:
+      assets/css/css.logged.css: { weight: 1 }
+
+splide:
+  js:
+    assets/js/ex.splide.min.js: { weight: -20, attributes: { defer: true, async: true } }

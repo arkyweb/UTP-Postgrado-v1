@@ -1,0 +1,18 @@
+uuid: 46241922-7f11-4128-9d8f-694ad2dc720f
+langcode: es
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_px_bchivos
+field_name: field_px_bchivos
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

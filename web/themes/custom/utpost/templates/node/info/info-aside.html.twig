@@ -1,0 +1,66 @@
+<aside id="info" class="col_4 target_aside">
+  <div class="sticky" uk-sticky="bottom: #main; media: 900; offset: 90">
+
+    <header>
+      <h3>Detalles</h3>
+    </header>
+
+    <article>
+
+      {% if node.field_target_inicio.value|length > 0 %}
+        <p><strong>Inicio:</strong> {{ node.field_target_inicio.value }}</p>
+      {% endif %}
+      {% if node.field_target_horario.value|length > 0 %}
+        <p><strong>Horario:</strong> {{ node.field_target_horario.value }}</p>
+      {% endif %}
+      {% if node.field_target_duracion.value|length > 0 %}
+        <p><strong>Duración:</strong> {{ node.field_target_duracion.value }}</p>
+      {% endif %}
+      {% if node.field_target_inversion.value|length > 0 %}
+        <p><strong>Inversión:</strong> {{ node.field_target_inversion.value }}</p>
+      {% endif %}
+
+      <button data-opens="informacion" class="boton_negro" uk-toggle="target: #informacion" aria-label="Mas Información">
+        Solicita más información
+      </button>
+
+      <ul uk-scrollspy-nav="closest: li; scroll: true; offset: 45">
+        <li><a href="#presentacion">Presentación</a></li>
+        {% if node.field_target_beneficios.value|length > 0 %}
+          <li><a href="#beneficios">Beneficios</a></li>
+        {% endif %}
+        {% if node.field_target_malla.0.value|length > 0 %}
+          <li><a href="#malla">Malla Curricular</a></li>
+        {% endif %}
+        {% if node.field_target_docentes.0.value|length > 0 %}
+          <li><a href="#docentes">Docentes</a></li>
+        {% endif %}
+      </ul>
+
+      {% if node.field_target_whatsapp.0.value|length > 0 %}
+
+      {% set whatsapp = node.field_target_whatsapp.0.value %}
+      {% set whatsapp_cut = whatsapp|replace ({ '+51': '' }) %}
+      {% set whatsapp_first = whatsapp_cut|slice(0, 3) %}
+      {% set whatsapp_second = whatsapp_cut|slice(3, 3) %}
+      {% set whatsapp_third = whatsapp_cut|slice(6, 3) %}
+      {% set whatsapp_view = whatsapp_first ~ ' ' ~ whatsapp_second ~ ' ' ~ whatsapp_third %}
+      {% set whatsapp_name = node.field_target_encargado.0.value %}
+      {% set whatsapp_label = node.label %}
+      {% set whatsapp_msj = 'Hola ' ~ whatsapp_name ~ ', deseo saber mas sobre ' ~ whatsapp_label ~ ' en la UTP Postgrado' %}
+
+      <h6>¿Necesitas más información?</h6>
+      {% if whatsapp_name|length > 0 %}
+        <p>{{ whatsapp_name }}</p>
+      {% endif %}
+      <a
+      class="button_whatsapp" target="_blank" rel="noopener noreferrer"
+      href="https://api.whatsapp.com/send?phone={{ whatsapp }}&text={{ whatsapp_msj }}">
+        {{ whatsapp_view }}
+      </a>
+      {% endif %}
+
+    </article>
+
+  </div>
+</aside>

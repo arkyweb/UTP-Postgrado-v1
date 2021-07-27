@@ -1,0 +1,8 @@
+uuid: 0333ca10-0e11-4a82-b7e4-90d49cde9647
+langcode: es
+status: true
+dependencies: {  }
+name: Acordiones
+vid: tx_acordiones
+description: ''
+weight: 0

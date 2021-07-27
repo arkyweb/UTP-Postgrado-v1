@@ -1,0 +1,10 @@
+uuid: fe2b1d1e-2b7f-4fbf-93d8-a826adb459fa
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: yoNVreoTdTZTY7GuE8fI9Jmxqdz8vlo4ZJKixMNSosw
+name: 'Categorías UTP'
+vid: tags
+description: ''
+weight: 0

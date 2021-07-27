@@ -1,0 +1,19 @@
+uuid: bcf80ebf-4d4d-43a4-98dd-b93d2b7a7e6d
+langcode: es
+status: true
+dependencies:
+  config:
+    - config_pages.type.general
+    - field.storage.config_pages.field_cp_subs_title
+id: config_pages.general.field_cp_subs_title
+field_name: field_cp_subs_title
+entity_type: config_pages
+bundle: general
+label: 'Título de Subscripcion'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

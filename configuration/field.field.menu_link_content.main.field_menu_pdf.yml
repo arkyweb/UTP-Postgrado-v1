@@ -1,0 +1,27 @@
+uuid: 1da50d5e-89c2-439c-b9be-377c177e0a8c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.menu_link_content.field_menu_pdf
+    - system.menu.main
+  module:
+    - file
+id: menu_link_content.main.field_menu_pdf
+field_name: field_menu_pdf
+entity_type: menu_link_content
+bundle: main
+label: PDF
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: pdf/menu
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

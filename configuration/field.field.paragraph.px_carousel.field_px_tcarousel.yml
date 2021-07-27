@@ -1,0 +1,29 @@
+uuid: 19395d4d-de2c-49b8-84e7-21f1568cdbb8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_px_tcarousel
+    - paragraphs.paragraphs_type.px_carousel
+    - taxonomy.vocabulary.tx_carusel
+id: paragraph.px_carousel.field_px_tcarousel
+field_name: field_px_tcarousel
+entity_type: paragraph
+bundle: px_carousel
+label: 'Tipo de Carousel'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tx_carusel: tx_carusel
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,12 @@
+uuid: bbfd43f4-f1ff-4817-9be7-55a5c446a193
+langcode: es
+status: true
+dependencies:
+  module:
+    - user_history
+_core:
+  default_config_hash: ggnLfDKZKWq9-z6LNunoyDsOtcsUSIo0imn2QXKJIbw
+id: user_history.tab
+label: 'User profile tab'
+targetEntityType: user_history
+cache: true

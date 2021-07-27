@@ -1,0 +1,43 @@
+uuid: af854224-3a37-4e1f-a703-057eebf736ec
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_target_dirigido
+    - node.type.targets
+    - paragraphs.paragraphs_type.px_sencillo
+  module:
+    - entity_reference_revisions
+id: node.targets.field_target_dirigido
+field_name: field_target_dirigido
+entity_type: node
+bundle: targets
+label: 'Dirigido a'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      px_sencillo: px_sencillo
+    target_bundles_drag_drop:
+      px_acordion:
+        weight: 6
+        enabled: false
+      px_block:
+        weight: 7
+        enabled: false
+      px_carousel:
+        weight: 8
+        enabled: false
+      px_header:
+        weight: 9
+        enabled: false
+      px_sencillo:
+        enabled: true
+        weight: 10
+field_type: entity_reference_revisions

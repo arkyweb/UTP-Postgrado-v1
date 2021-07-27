@@ -1,0 +1,19 @@
+uuid: 65bfd049-22f8-4aab-a094-e37d2ec6827e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_target_whatsapp
+    - node.type.targets
+id: node.targets.field_target_whatsapp
+field_name: field_target_whatsapp
+entity_type: node
+bundle: targets
+label: Whatsapp
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

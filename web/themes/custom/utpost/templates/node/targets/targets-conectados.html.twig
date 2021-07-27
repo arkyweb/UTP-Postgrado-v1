@@ -1,0 +1,7 @@
+{% if node.field_target_conectados.value|length > 0 %}
+<section id="conectados" class="conectados">
+  {% for carousel in node.field_target_conectados %}
+    {% include '@utpost/node/parrafos/carousel.html.twig' ignore missing %}
+  {% endfor %}
+</section>
+{% endif %}

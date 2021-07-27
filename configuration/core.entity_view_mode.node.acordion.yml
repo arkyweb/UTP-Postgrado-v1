@@ -1,0 +1,10 @@
+uuid: 2a7ac418-77f1-4217-ad77-6bc24f618259
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.acordion
+label: Acordion
+targetEntityType: node
+cache: true

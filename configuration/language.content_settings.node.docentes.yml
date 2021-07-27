@@ -1,0 +1,11 @@
+uuid: 65984e64-a412-435a-b06b-e26f256d8d5c
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.docentes
+id: node.docentes
+target_entity_type_id: node
+target_bundle: docentes
+default_langcode: site_default
+language_alterable: false

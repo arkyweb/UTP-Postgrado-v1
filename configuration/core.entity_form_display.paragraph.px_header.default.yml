@@ -1,0 +1,52 @@
+uuid: d72b404c-52b7-4c09-b7a9-3c6785cec02c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.px_header.field_px_body
+    - field.field.paragraph.px_header.field_px_body_format
+    - field.field.paragraph.px_header.field_px_link
+    - field.field.paragraph.px_header.field_px_title
+    - paragraphs.paragraphs_type.px_header
+  module:
+    - field_states_ui
+    - link
+    - text
+id: paragraph.px_header.default
+targetEntityType: paragraph
+bundle: px_header
+mode: default
+content:
+  field_px_body_format:
+    weight: 2
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list: ''
+          add: Agregar
+    type: text_textarea
+    region: content
+  field_px_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_px_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  field_px_body: true
+  status: true

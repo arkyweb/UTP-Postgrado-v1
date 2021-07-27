@@ -1,0 +1,27 @@
+uuid: 7ebe67cf-d6f8-4a7a-a014-da6984eca9f0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_target_malla
+    - node.type.targets
+  module:
+    - file
+id: node.targets.field_target_malla
+field_name: field_target_malla
+entity_type: node
+bundle: targets
+label: Malla
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: pdf/targets/malla
+  file_extensions: 'pdf txt'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

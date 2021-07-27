@@ -1,0 +1,43 @@
+uuid: 5827dbb2-76cb-41e0-a8db-5f46184c86a2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_target_malla_acordion
+    - node.type.targets
+    - paragraphs.paragraphs_type.px_sencillo
+  module:
+    - entity_reference_revisions
+id: node.targets.field_target_malla_acordion
+field_name: field_target_malla_acordion
+entity_type: node
+bundle: targets
+label: 'Malla Acordion'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      px_sencillo: px_sencillo
+    target_bundles_drag_drop:
+      px_acordion:
+        weight: 6
+        enabled: false
+      px_block:
+        weight: 7
+        enabled: false
+      px_carousel:
+        weight: 8
+        enabled: false
+      px_header:
+        weight: 9
+        enabled: false
+      px_sencillo:
+        enabled: true
+        weight: 10
+field_type: entity_reference_revisions

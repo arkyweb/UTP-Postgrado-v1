@@ -1,0 +1,19 @@
+uuid: 0180deb4-2f4e-4861-885a-f3c8ca7de3f0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_px_body
+    - paragraphs.paragraphs_type.px_header
+id: paragraph.px_header.field_px_body
+field_name: field_px_body
+entity_type: paragraph
+bundle: px_header
+label: Cuerpo
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

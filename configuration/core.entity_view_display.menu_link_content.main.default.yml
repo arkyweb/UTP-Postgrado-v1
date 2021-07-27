@@ -1,0 +1,24 @@
+uuid: a9087308-1fc4-4c7a-9a5c-f44a08a5baa9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.main.field_menu_id
+    - field.field.menu_link_content.main.field_menu_pdf
+    - field.field.menu_link_content.main.field_menu_title
+    - system.menu.main
+id: menu_link_content.main.default
+targetEntityType: menu_link_content
+bundle: main
+mode: default
+content:
+  children:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_menu_id: true
+  field_menu_pdf: true
+  field_menu_title: true
+  langcode: true

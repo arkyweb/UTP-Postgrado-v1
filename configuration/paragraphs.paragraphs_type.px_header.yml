@@ -1,0 +1,10 @@
+uuid: 9b1f283a-a688-4d21-94c6-12946c3d6c22
+langcode: es
+status: true
+dependencies: {  }
+id: px_header
+label: Cabecera
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

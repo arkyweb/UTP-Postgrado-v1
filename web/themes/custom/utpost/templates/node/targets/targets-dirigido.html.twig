@@ -1,0 +1,7 @@
+{% if node.field_target_dirigido.0.value|length > 0 %}
+<section id="dirigido" class="dirigido">
+  {% for parrafo in node.field_target_dirigido %}
+    {% include '@utpost/node/parrafos/parrafo.html.twig' ignore missing %}
+  {% endfor %}
+</section>
+{% endif %}

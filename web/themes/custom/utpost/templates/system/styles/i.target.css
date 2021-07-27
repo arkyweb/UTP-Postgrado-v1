@@ -1,0 +1,26 @@
+.n_targets .presentacion_container { color: white; }
+
+.target_container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.target_container > * {
+  position: relative;
+}
+.target_container > * > * {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.target_container > * > div > section {
+    border-top: 1px solid gray;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.target_container > * > div > section:first-child {
+    border-top: 0;
+    padding-top: 0;
+}
+.target_presentacion { border-right: 1px solid gray; background-color: black; position: relative; }
+.target_main { border-right: 1px solid gray; padding-right: 2rem; }
+.target_aside { padding-left: 2rem; position: absolute; right: 0; top: 0; }
+.target_aside > * > *:not(:first-child) { margin-top: 1rem; }

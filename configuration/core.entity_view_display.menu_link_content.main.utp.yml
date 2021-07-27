@@ -1,0 +1,39 @@
+uuid: 9f9bb117-2c35-4c08-a715-fd052e478cb4
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.menu_link_content.utp
+    - field.field.menu_link_content.main.field_menu_id
+    - field.field.menu_link_content.main.field_menu_pdf
+    - field.field.menu_link_content.main.field_menu_title
+    - system.menu.main
+id: menu_link_content.main.utp
+targetEntityType: menu_link_content
+bundle: main
+mode: utp
+content:
+  children:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_menu_id:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_menu_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_menu_pdf: true
+  langcode: true

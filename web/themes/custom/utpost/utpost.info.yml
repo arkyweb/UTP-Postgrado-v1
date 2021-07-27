@@ -1,0 +1,87 @@
+name: UTP Postgrado
+description: Variación de AW9 Theme
+type: theme
+version: '3.0'
+core_version_requirement: 9.x
+base theme: stable
+
+regions:
+  header:             'Cabecera'
+  content:            'Contenido'
+  sidebar:            'Lateral'
+  pre_footer:         'Pre Footer'
+  footer:             'Footer'
+  menu_area:          'Area de menu movil'
+  search_area:        'Area de Buscador'
+  tabs_area:          'Area de pastillas'
+  messages_area:      'Area de mensajes'
+  disabled_area:      'Area deshabilitada'
+
+stylesheets-remove:
+  - core/modules/system/css/components/align.module.css
+  - core/modules/system/css/components/autocomplete-loading.module.css
+  - core/modules/system/css/components/fieldgroup.module.css
+  - core/modules/system/css/components/container-inline.module.css
+  - core/modules/system/css/components/clearfix.module.css
+  - core/modules/system/css/components/details.module.css
+  - core/modules/system/css/components/hidden.module.css
+  - core/modules/system/css/components/item-list.module.css
+  - core/modules/system/css/components/js.module.css
+  - core/modules/system/css/components/nowrap.module.css
+  - core/modules/system/css/components/position-container.module.css
+  - core/modules/system/css/components/progress.module.css
+  - core/modules/system/css/components/reset-appearance.module.css
+  - core/modules/system/css/components/resize.module.css
+  - core/modules/system/css/components/sticky-header.module.css
+  - core/modules/system/css/components/system-status-counter.css
+  - core/modules/system/css/components/system-status-report-counters.css
+  - core/modules/system/css/components/system-status-report-general-info.css
+  - core/modules/system/css/components/tabledrag.module.css
+  - core/modules/system/css/components/tablesort.module.css
+  - core/modules/system/css/components/tree-child.module.css
+  - core/modules/views/css/views.module.css
+  - core/themes/stable/css/system/components/sticky-header.module.css
+  - core/themes/stable/css/system/components/tabledrag.module.css
+  - core/themes/stable/css/system/components/resize.module.css
+  - core/themes/stable/css/system/components/reset-appearance.module.css
+  - core/themes/stable/css/system/components/tablesort.module.css
+  - core/themes/stable/css/system/components/tree-child.module.css
+  - core/themes/stable/css/views/views.module.css
+  - core/themes/stable/css/system/components/align.module.css
+  - core/themes/stable/css/system/components/autocomplete-loading.module.css
+  - core/themes/stable/css/system/components/fieldgroup.module.css
+  - core/themes/stable/css/system/components/container-inline.module.css
+  - core/themes/stable/css/system/components/clearfix.module.css
+  - core/themes/stable/css/system/components/details.module.css
+  - core/themes/stable/css/system/components/hidden.module.css
+  - core/themes/stable/css/system/components/item-list.module.css
+  - core/themes/stable/css/system/components/js.module.css
+  - core/themes/stable/css/system/components/nowrap.module.css
+  - core/themes/stable/css/system/components/position-container.module.css
+  - core/themes/stable/css/system/components/progress.module.css
+  - core/themes/stable/css/system/components/system-status-counter.css
+  - core/themes/stable/css/system/components/system-status-report-counters.css
+  - core/themes/stable/css/system/components/system-status-report-general-info.css
+  - core/themes/stable/css/filter/filter.caption.css
+  - modules/contrib/webform/css/webform.form.css
+  - modules/contrib/webform/css/webform.element.details.toggle.css
+  - modules/contrib/paragraphs/css/paragraphs.unpublished.css
+  - modules/contrib/commerce/modules/cart/css/commerce_cart.layout.css
+  - modules/contrib/commerce/modules/cart/css/commerce_cart.theme.css
+  - core/themes/stable/css/system/components/ajax-progress.module.css
+
+libraries-override:
+  core/jquery:
+    js:
+      assets/vendor/jquery/jquery.min.js: //code.jquery.com/jquery-3.6.0.min.js
+      assets/vendor/jquery/jquery-extend-3.4.0.js: false
+  core/jquery.once:
+    js:
+      assets/vendor/jquery-once/jquery.once.min.js: //cdnjs.cloudflare.com/ajax/libs/jquery-once/2.2.3/jquery.once.min.js
+  core/domready:
+    js:
+      assets/vendor/domready/ready.min.js: //cdnjs.cloudflare.com/ajax/libs/domready/1.0.8/ready.min.js
+  core/jquery.cookie:
+    js:
+      assets/vendor/jquery.cookie/jquery.cookie.min.js: //cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js
+  core/html5shiv:

@@ -1,0 +1,14 @@
+<div class="uk-accordion-title">
+  <h4>{{ nombres }} {{ apellidos }}</h4>
+</div>
+<div class="uk-accordion-content">
+  <div class="columnas">
+    <figure>
+      <img data-src="{{ foto }}" alt="{{ nombres }} {{ apellidos }}" width="200" height="200" uk-img />
+    </figure>
+    <article class="col_2">
+      {% if descripcion %} {{ descripcion|raw }} {% endif %}
+      {% if linkedin %}<a href="{{ linkedin }}" target="_blank" rel="nofollow noreferrer" class="boton_menu">LN</a>{% endif %}
+    </article>
+  </div>
+</div>

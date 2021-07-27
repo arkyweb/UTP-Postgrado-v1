@@ -1,0 +1,22 @@
+uuid: 410b88df-8f11-45fd-9d92-8e3f2ab38071
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: rutas_productos
+label: 'Rutas Productos'
+type: 'canonical_entities:node'
+pattern: '/[node:field_target_type:entity:name]-[node:field_target_area:entity:name]/[node:title]'
+selection_criteria:
+  b67c3dd7-7281-407b-bbe0-6504ef5e02d4:
+    id: node_type
+    bundles:
+      targets: targets
+    negate: false
+    context_mapping:
+      node: node
+    uuid: b67c3dd7-7281-407b-bbe0-6504ef5e02d4
+selection_logic: and
+weight: -5
+relationships: {  }

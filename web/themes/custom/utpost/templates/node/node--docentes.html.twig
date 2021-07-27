@@ -1,0 +1,29 @@
+{% set nombres = node.field_perfil_nombres.value %}
+{% set apellidos = node.field_perfil_apellidos.value %}
+{% set descripcion = node.field_descripcion.value %}
+{% set linkedin = node.field_linkedin.value %}
+{% set foto = file_url(node.field_foto.0.entity.fileuri) %}
+
+{% if logged_in %}
+<article{{ attributes }}>
+{{ title_prefix }}
+{{ title_suffix }}
+{% endif %}
+
+{% if view_mode == 'teaser' %}
+  {% include '@utpost/node/docentes/docentes-teaser.html.twig' ignore missing %}
+{% elseif view_mode == 'acordion' %}
+  {% include '@utpost/node/docentes/docentes-acordion.html.twig' ignore missing %}
+{% else %}
+
+{% include '@utpost/node/elements/util.html.twig' ignore missing %}
+
+<div class="container">
+{{ label }}
+</div>
+
+{% endif %}
+
+{% if logged_in %}
+</article>
+{% endif %}

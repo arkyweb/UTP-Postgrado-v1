@@ -1,0 +1,21 @@
+<section id="copyright" class="copyright">
+<div class="container">
+  <div class="columnas">
+    <div class="col_full order-desktop">
+      <div class="columnas">
+        <div class="col_2">
+          {{ drupal_menu('footer', 1 , 0, false) }}
+        </div>
+        {% if intercorp_img %}
+        <div class="col_auto">
+          <img class="filtro" data-src="{{ intercorp_img }}" uk-img alt="UTP Postgrado es parte de INTERCORP" width="200" height="36" />
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="col_3">
+      <p>{{ 'now' | date('Y') }}UTP Postgrado. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</div>
+</section>

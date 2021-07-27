@@ -1,0 +1,11 @@
+uuid: 95f79786-2448-4f74-8bd5-d8490bac0076
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.productos
+id: taxonomy_term.productos
+target_entity_type_id: taxonomy_term
+target_bundle: productos
+default_langcode: site_default
+language_alterable: false

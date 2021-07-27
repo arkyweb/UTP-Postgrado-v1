@@ -1,0 +1,17 @@
+uuid: dc075839-8b15-49ac-a898-c6326a59bf36
+langcode: es
+status: true
+dependencies: {  }
+id: general
+label: General
+context:
+  show_warning: true
+  group:
+    language: false
+  fallback:
+    language: ''
+menu:
+  path: /admin/general
+  weight: 0
+  description: 'Administración de detalles'
+token: true

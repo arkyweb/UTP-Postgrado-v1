@@ -1,0 +1,6 @@
+{% if logged_in %}
+<div class="container">
+  {{ drupal_messages() }}
+  {{ drupal_block('local_tasks_block') }}
+</div>
+{% endif %}

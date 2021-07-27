@@ -1,0 +1,21 @@
+uuid: 963e06c6-7a03-4895-92f2-95271dadeb1b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_px_body_format
+    - paragraphs.paragraphs_type.px_carousel
+  module:
+    - text
+id: paragraph.px_carousel.field_px_body_format
+field_name: field_px_body_format
+entity_type: paragraph
+bundle: px_carousel
+label: 'Cuerpo con Formato'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

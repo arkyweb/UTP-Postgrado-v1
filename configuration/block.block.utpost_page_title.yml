@@ -1,0 +1,20 @@
+uuid: 37700a5f-6d09-4024-bc64-af8f4841b1d6
+langcode: es
+status: true
+dependencies:
+  theme:
+    - utpost
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: utpost_page_title
+theme: utpost
+region: disabled_area
+weight: 6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Título de la página'
+  provider: core
+  label_display: '0'
+visibility: {  }

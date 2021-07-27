@@ -1,0 +1,264 @@
+uuid: 3a9157b2-c104-42aa-8819-41be51644e66
+langcode: es
+status: true
+dependencies:
+  config:
+    - config_pages.type.general
+    - field.field.config_pages.general.field_cp_autorizo
+    - field.field.config_pages.general.field_cp_direccion
+    - field.field.config_pages.general.field_cp_intercorp_img
+    - field.field.config_pages.general.field_cp_logo_img
+    - field.field.config_pages.general.field_cp_messenger
+    - field.field.config_pages.general.field_cp_publicidad
+    - field.field.config_pages.general.field_cp_rrss
+    - field.field.config_pages.general.field_cp_subs_body
+    - field.field.config_pages.general.field_cp_subs_title
+    - field.field.config_pages.general.field_cp_telefono
+    - field.field.config_pages.general.field_cp_transparencia
+    - field.field.config_pages.general.field_cp_transparencia_img
+    - field.field.config_pages.general.field_cp_whatsapp
+    - image.style.thumbnail
+  module:
+    - field_group
+    - image
+    - link
+third_party_settings:
+  field_group:
+    group_detalles:
+      children:
+        - group_imagenes
+        - group_rrss
+        - group_footer
+        - group_informacion
+        - group_suscripcion
+        - group_formulario
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+        weight: 0
+        direction: vertical
+      label: Detalles
+    group_imagenes:
+      children:
+        - field_cp_logo_img
+        - field_cp_intercorp_img
+        - field_cp_transparencia_img
+      parent_name: group_detalles
+      weight: 20
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+        weight: 0
+        formatter: closed
+      label: Imagenes
+    group_rrss:
+      children:
+        - field_cp_rrss
+      parent_name: group_detalles
+      weight: 21
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+        formatter: closed
+      label: RRSS
+    group_footer:
+      children:
+        - field_cp_direccion
+        - field_cp_transparencia
+      parent_name: group_detalles
+      weight: 22
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+        formatter: closed
+      label: Footer
+    group_suscripcion:
+      children:
+        - field_cp_subs_title
+        - field_cp_subs_body
+      parent_name: group_detalles
+      weight: 24
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+        formatter: closed
+      label: Suscripcion
+    group_formulario:
+      children:
+        - field_cp_autorizo
+        - field_cp_publicidad
+      parent_name: group_detalles
+      weight: 25
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Formulario
+    group_informacion:
+      children:
+        - field_cp_telefono
+        - field_cp_messenger
+        - field_cp_whatsapp
+      parent_name: group_detalles
+      weight: 23
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Información
+id: config_pages.general.default
+targetEntityType: config_pages
+bundle: general
+mode: default
+content:
+  field_cp_autorizo:
+    weight: 24
+    settings:
+      size: 120
+      placeholder: ''
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list: ''
+          add: Agregar
+    type: string_textfield
+    region: content
+  field_cp_direccion:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cp_intercorp_img:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_cp_logo_img:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_cp_messenger:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cp_publicidad:
+    weight: 25
+    settings:
+      size: 120
+      placeholder: ''
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list: ''
+          add: Agregar
+    type: string_textfield
+    region: content
+  field_cp_rrss:
+    weight: 9
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_cp_subs_body:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cp_subs_title:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cp_telefono:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cp_transparencia:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cp_transparencia_img:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_cp_whatsapp:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  label: true

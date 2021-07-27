@@ -1,0 +1,14 @@
+uuid: 0423cf17-c9e8-4cc3-9cdc-2b1d6284246c
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tx_acordiones
+id: taxonomy_vocabulary_tx_acordiones
+entity_type_id: taxonomy_vocabulary
+entity_id: tx_acordiones
+action: page_redirect
+allow_override: 1
+redirect: /<front>
+redirect_code: 301
+redirect_fallback_action: access_denied

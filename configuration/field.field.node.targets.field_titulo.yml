@@ -1,0 +1,19 @@
+uuid: 57740484-a157-4244-be83-ddd3e081c28c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_titulo
+    - node.type.targets
+id: node.targets.field_titulo
+field_name: field_titulo
+entity_type: node
+bundle: targets
+label: Título
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,29 @@
+uuid: 1965d50e-c98b-48cf-923f-1077c77ef6d3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_target_docentes
+    - node.type.docentes
+    - node.type.targets
+id: node.targets.field_target_docentes
+field_name: field_target_docentes
+entity_type: node
+bundle: targets
+label: Docentes
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      docentes: docentes
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

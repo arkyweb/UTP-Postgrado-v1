@@ -1,0 +1,92 @@
+{% if parrafo.entity.field_px_acordion.0.target_id in ['22'] %}{# Simple #}
+
+{% if parrafo.entity.field_px_title.0.value|length > 0 %}
+<div class="uk-accordion-title">
+  {{ parrafo.entity.field_px_title.0.value }}
+  {% if parrafo.entity.field_px_title.1.value|length > 0 %}<br>{{ parrafo.entity.field_px_title.1.value }}{% endif %}
+  {% if parrafo.entity.field_px_title.2.value|length > 0 %}<br>{{ parrafo.entity.field_px_title.2.value }}{% endif %}
+</div>
+{% endif %}
+{% if parrafo.entity.field_px_body.0.value|length > 0 %}
+<div class="uk-accordion-content">
+  <p>{{ parrafo.entity.field_px_body.0.value }}</p>
+</div>
+{% endif %}
+
+{% elseif parrafo.entity.field_px_acordion.0.target_id in ['28'] %}{# Simple + Imagen #}
+
+{% if parrafo.entity.field_px_title.0.value|length > 0 %}
+<div class="uk-accordion-title">
+  {{ parrafo.entity.field_px_title.0.value }}
+  {% if parrafo.entity.field_px_title.1.value|length > 0 %}<br>{{ parrafo.entity.field_px_title.1.value }}{% endif %}
+  {% if parrafo.entity.field_px_title.2.value|length > 0 %}<br>{{ parrafo.entity.field_px_title.2.value }}{% endif %}
+</div>
+{% endif %}
+{% if parrafo.entity.field_px_img.0.value|length > 0 %}
+<div class="uk-accordion-content">
+  {% if parrafo.entity.field_px_body.0.value|length > 0 %}
+    <p>{{ parrafo.entity.field_px_body.0.value }}</p>
+  {% endif %}
+    <figure>
+      <img class="img_full"
+      data-src="{{ file_url(parrafo.entity.field_px_img.0.entity.fileuri) }}" alt="{{ parrafo.entity.field_px_img.0.alt }}" uk-img />
+    </figure>
+</div>
+{% endif %}
+
+{% elseif parrafo.entity.field_px_acordion.0.target_id in ['23'] %} {# Formateado #}
+
+{% if parrafo.entity.field_px_title.0.value|length > 0 %}
+<div class="uk-accordion-title">
+  {{ parrafo.entity.field_px_title.0.value }}
+  {% if parrafo.entity.field_px_title.1.value|length > 0 %}<br>{{ parrafo.entity.field_px_title.1.value }}{% endif %}
+  {% if parrafo.entity.field_px_title.2.value|length > 0 %}<br>{{ parrafo.entity.field_px_title.2.value }}{% endif %}
+</div>
+{% endif %}
+{% if parrafo.entity.field_px_body_format.0.value|length > 0 %}
+<div class="uk-accordion-content">
+  {{ parrafo.entity.field_px_body_format.0.value|raw }}
+</div>
+{% endif %}
+
+{% elseif parrafo.entity.field_px_acordion.0.target_id in ['24'] %} {# Completo (No Acordion) #}
+
+<div class="columnas columnas_top">
+  {% if parrafo.entity.field_px_title.0.value|length > 0 %}
+  <div class="col_2">
+    <h3>
+      {{ parrafo.entity.field_px_title.0.value }}
+      {% if parrafo.entity.field_px_title.1.value|length > 0 %}<br>{{ parrafo.entity.field_px_title.1.value }}{% endif %}
+      {% if parrafo.entity.field_px_title.2.value|length > 0 %}<br>{{ parrafo.entity.field_px_title.2.value }}{% endif %}
+    </h3>
+    {% if parrafo.entity.field_px_body_format.0.value|length > 0 %}
+      {{ parrafo.entity.field_px_body_format.0.value|raw }}
+    {% endif %}
+    {% if parrafo.entity.field_px_body.0.value|length > 0 %}
+    <small>{{ parrafo.entity.field_px_body.0.value }}</small>
+    {% endif %}
+  </div>
+  {% endif %}
+  {% if parrafo.entity.field_px_img.0.value|length > 0 %}
+  <div class="col_2">
+    <img class="img_full"
+    data-src="{{ file_url(parrafo.entity.field_px_img.0.entity.fileuri) }}" alt="{{ parrafo.entity.field_px_img.0.alt }}" uk-img />
+  </div>
+  {% endif %}
+</div>
+
+{% else %}
+
+{% if parrafo.entity.field_px_title.0.value|length > 0 %}
+<h3 class="parrafo_title">
+{{ parrafo.entity.field_px_title.0.value }}
+{% if parrafo.entity.field_px_title.1.value|length > 0 %}<br>{{ parrafo.entity.field_px_title.1.value }}{% endif %}
+{% if parrafo.entity.field_px_title.2.value|length > 0 %}<br>{{ parrafo.entity.field_px_title.2.value }}{% endif %}
+</h3>
+{% endif %}
+
+{% if parrafo.entity.field_px_body.0.value|length > 0 %}
+<p class="parrafo_body">{{ parrafo.entity.field_px_body.0.value }}</p>
+{% endif %}
+
+{% endif %}

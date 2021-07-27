@@ -1,0 +1,19 @@
+uuid: 7645ef8f-cf1b-440a-a88f-eef4970a8c83
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_px_title
+    - paragraphs.paragraphs_type.px_block
+id: paragraph.px_block.field_px_title
+field_name: field_px_title
+entity_type: paragraph
+bundle: px_block
+label: Título
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,43 @@
+uuid: 55d2fff9-64c2-4b1d-a2a9-2306dfdfb166
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_target_beneficios
+    - node.type.targets
+    - paragraphs.paragraphs_type.px_sencillo
+  module:
+    - entity_reference_revisions
+id: node.targets.field_target_beneficios
+field_name: field_target_beneficios
+entity_type: node
+bundle: targets
+label: Beneficios
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      px_sencillo: px_sencillo
+    target_bundles_drag_drop:
+      px_acordion:
+        weight: 6
+        enabled: false
+      px_block:
+        weight: 7
+        enabled: false
+      px_carousel:
+        weight: 8
+        enabled: false
+      px_header:
+        weight: 9
+        enabled: false
+      px_sencillo:
+        enabled: true
+        weight: 10
+field_type: entity_reference_revisions

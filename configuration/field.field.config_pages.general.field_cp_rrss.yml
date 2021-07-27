@@ -1,0 +1,23 @@
+uuid: 70ae84c8-b623-4ecb-bd85-10493990e267
+langcode: es
+status: true
+dependencies:
+  config:
+    - config_pages.type.general
+    - field.storage.config_pages.field_cp_rrss
+  module:
+    - link
+id: config_pages.general.field_cp_rrss
+field_name: field_cp_rrss
+entity_type: config_pages
+bundle: general
+label: RR.SS
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

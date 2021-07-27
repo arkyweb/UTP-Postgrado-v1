@@ -1,0 +1,47 @@
+{% if bloque.entity.field_px_columns.0.value == '1' %}
+
+  <header>
+  {% if titular.entity.field_px_title.0.value|length > 0 %}
+    <h2 class="titular">
+      {{ titular.entity.field_px_title.0.value }}
+      {% if titular.entity.field_px_title.1.value|length > 0 %}<br>{{ titular.entity.field_px_title.1.value }}{% endif %}
+      {% if titular.entity.field_px_title.2.value|length > 0 %}<br>{{ titular.entity.field_px_title.2.value }}{% endif %}
+    </h2>
+  {% endif %}
+
+  <div>
+  {% if titular.entity.field_px_body_format.0.value|length > 0 %}
+  {{ titular.entity.field_px_body_format.0.value|raw }}
+  {% endif %}
+
+  {% if titular.entity.field_px_link.0.value|length > 0 %}
+  <a href="{{ titular.entity.field_px_link.0.url }}">{{ titular.entity.field_px_link.0.title }}</a>
+  {% endif %}
+  </div>
+  </header>
+
+{% else %}
+
+  <header class="columnas">
+  {% if titular.entity.field_px_title.0.value|length > 0 %}
+  <div class="col_2">
+    <h2 class="titular">
+      {{ titular.entity.field_px_title.0.value }}
+      {% if titular.entity.field_px_title.1.value|length > 0 %}<br>{{ titular.entity.field_px_title.1.value }}{% endif %}
+      {% if titular.entity.field_px_title.2.value|length > 0 %}<br>{{ titular.entity.field_px_title.2.value }}{% endif %}
+    </h2>
+  </div>
+  {% endif %}
+
+  <div class="col_2">
+  {% if titular.entity.field_px_body_format.0.value|length > 0 %}
+  {{ titular.entity.field_px_body_format.0.value|raw }}
+  {% endif %}
+
+  {% if titular.entity.field_px_link.0.value|length > 0 %}
+  <a href="{{ titular.entity.field_px_link.0.url }}">{{ titular.entity.field_px_link.0.title }}</a>
+  {% endif %}
+  </div>
+  </header>
+
+{% endif %}

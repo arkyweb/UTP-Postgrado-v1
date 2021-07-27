@@ -1,0 +1,22 @@
+uuid: 3dbcb77a-2457-4c82-a092-24e01cf4a456
+langcode: es
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - utpost
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: utpost_help
+theme: utpost
+region: disabled_area
+weight: 2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Ayuda
+  provider: help
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,72 @@
+{#
+/**
+ * @file
+ * Theme override for status messages.
+ *
+ * Displays status, error, and warning messages, grouped by type.
+ *
+ * An invisible heading identifies the messages for assistive technology.
+ * Sighted users see a colored box. See http://www.w3.org/TR/WCAG-TECHS/H69.html
+ * for info.
+ *
+ * Add an ARIA label to the contentinfo area so that assistive technology
+ * user agents will better describe this landmark.
+ *
+ * Available variables:
+ * - message_list: List of messages to be displayed, grouped by type.
+ * - status_headings: List of all status types.
+ * - attributes: HTML attributes for the element, including:
+ *   - class: HTML classes.
+ */
+#}
+{% set classes = attributes.offsetGet('class')|default({}) %}
+{%
+  set status_heading = {
+    'status': 'Status message'|t,
+    'error': 'Error message'|t,
+    'warning': 'Warning message'|t,
+    'info': 'Informative message'|t,
+  }
+%}
+{%
+  set status_classes = {
+    'status': 'uk-alert-success',
+    'error': 'uk-alert-danger',
+    'warning': 'uk-alert-warning',
+    'info': 'uk-alert-primary',
+  }
+%}
+{%
+  set status_roles = {
+    'status': 'status',
+    'error': 'alert',
+    'warning': 'alert',
+    'info': 'status',
+  }
+%}
+
+{% for type, messages in message_list %}
+
+<div class="local_messages">
+<div
+  uk-alert
+  data-drupal-messages
+  {{ attributes.setAttribute('class', classes).addClass(status_classes[type]).setAttribute('role', status_roles[type]).setAttribute('aria-label', status_headings[type]) }}
+>
+
+  <a class="uk-alert-close" uk-close></a>
+
+      {% if messages|length > 1 %}
+          {% for message in messages %}
+            <p>{{ message }}</p>
+          {% endfor %}
+      {% else %}
+        <p>{{ messages|first }}</p>
+      {% endif %}
+
+  </div>
+
+</div>
+</div>
+
+{% endfor %}

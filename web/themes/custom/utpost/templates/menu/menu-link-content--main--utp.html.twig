@@ -1,0 +1,25 @@
+{% import _self as menu %}
+
+{{ menu.build_menu_link_content(attributes, menu_link_content, show_item_link, content, elements) }}
+
+{% macro build_menu_link_content(attributes, menu_link_content, show_item_link, content, elements) %}
+
+  {% set menu_modal_id = content.field_menu_id['#items'].getString() %}
+  {% set menu_modal = ['uk-modal-full', 'modal-menu'] %}
+  {% set menu_remove = ['menu_link_content', 'menu-link-contentmain', 'view-mode-utp'] %}
+{# {{ attributes.addClass(menu_modal).setAttribute('id', menu_modal_id).setAttribute('uk-modal', '').removeClass(menu_remove) }} #}
+<div id="{{ content.field_menu_id['#items'].getString() }}" class="uk-modal-full modal-menu" uk-modal>
+  <div class="uk-modal-dialog">
+    <button class="uk-modal-close-full uk-close-large boton_close" type="button" uk-close></button>
+    {% if show_item_link %}
+      {{ link(menu_link_content.getTitle(), menu_link_content.getUrlObject()) }}
+    {% endif %}
+    <button class="boton_titulo" uk-toggle="target: #menu" aria-label="Retroceder Menú">
+      {{ content.field_menu_title['#items'].getString() }}
+    </button>
+    <nav class="level-1">{{ content.children }}</nav>
+  </div>
+</div>
+{% endmacro %}
+
+{#{% if content %}{{ content }}{% endif %}#}

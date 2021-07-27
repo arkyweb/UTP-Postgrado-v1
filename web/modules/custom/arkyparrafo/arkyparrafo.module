@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains hook implementations for the ArkyParrafo module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ */
+ function arkyparrafo_inline_entity_form_entity_form_alter(&$entity_form, &$form_state) {
+   if ($entity_form['#entity_type'] === 'paragraph' && $entity_form['#bundle'] === 'px_block') {
+     $parents = $entity_form['#field_parents'];
+     // It needs to get the parent form (content type form field) in order to work fine.
+     $identifier = $parents[0] . '[' . implode('][', array_slice($parents, 1)) . ']';
+     // I need to use the target_id to aim the wdiget.
+     // The first input should be shown if I select 1, 2, 3, or 5 content to be added.
+     $entity_form["field_px_group"]["widget"][0]["target_id"]['#states'] = [
+       'enabled' => [
+         'select[name="' . $identifier . '[field_px_px]"]' => [
+           ['value' => 1],
+         ],
+       ],
+     ];
+     $entity_form["field_px_group"]["widget"][0]["target_id"]['#states'] = [
+       'enabled' => [
+         'select[name="' . $identifier . '[field_px_carousel]"]' => [
+           ['value' => 2],
+         ],
+       ],
+     ];
+   }
+ }

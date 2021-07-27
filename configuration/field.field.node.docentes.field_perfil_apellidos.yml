@@ -1,0 +1,19 @@
+uuid: a114f0ef-36aa-4219-841b-dd792e3d3830
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_perfil_apellidos
+    - node.type.docentes
+id: node.docentes.field_perfil_apellidos
+field_name: field_perfil_apellidos
+entity_type: node
+bundle: docentes
+label: Apellidos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

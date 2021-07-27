@@ -1,0 +1,27 @@
+uuid: 39b97953-1f33-4889-be28-b932a2819d9e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_px_chivos
+    - paragraphs.paragraphs_type.px_carousel
+  module:
+    - file
+id: paragraph.px_carousel.field_px_chivos
+field_name: field_px_chivos
+entity_type: paragraph
+bundle: px_carousel
+label: Archivos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: pdf/more
+  file_extensions: 'txt pdf'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

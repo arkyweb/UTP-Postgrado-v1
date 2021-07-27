@@ -1,0 +1,14 @@
+uuid: becc4dd0-1c8f-4363-9947-0798aae13887
+langcode: es
+status: true
+dependencies: {  }
+id: utpost_fs
+name: 'UTPost Fast Search'
+data:
+  root_name: utpost_fs
+  readable_name: 'UTPost Fast Search'
+  short_description: 'Buscador Rápido de Productos'
+  module_package: ''
+  module_dependencies: {  }
+  hooks:
+    - hook_block_alter

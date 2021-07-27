@@ -1,0 +1,252 @@
+uuid: fc252f75-999b-49c3-ba40-2e765b8f5f46
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.px_block.field_px_carousel
+    - field.field.paragraph.px_block.field_px_columns
+    - field.field.paragraph.px_block.field_px_drupal
+    - field.field.paragraph.px_block.field_px_group
+    - field.field.paragraph.px_block.field_px_header
+    - field.field.paragraph.px_block.field_px_id
+    - field.field.paragraph.px_block.field_px_px
+    - field.field.paragraph.px_block.field_px_title
+    - paragraphs.paragraphs_type.px_block
+  module:
+    - block_field
+    - field_states_ui
+    - paragraphs
+id: paragraph.px_block.default
+targetEntityType: paragraph
+bundle: px_block
+mode: default
+content:
+  field_px_carousel:
+    type: paragraphs
+    weight: 5
+    settings:
+      title: Carousel
+      title_plural: Carousel
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: select
+      form_display_mode: default
+      default_paragraph_type: px_carousel
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: '0'
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list:
+            b892890c-32bf-4607-b300-3f78a6cf56db:
+              operations:
+                edit: Editar
+                delete: Eliminar
+            cbf89b87-b8e8-4140-b2df-deb090aee871:
+              operations:
+                edit: Editar
+                delete: Eliminar
+            6754d7cb-9c16-428f-943a-a409bf61c57b:
+              operations:
+                edit: Editar
+                delete: Eliminar
+          add: Agregar
+        field_states:
+          b892890c-32bf-4607-b300-3f78a6cf56db:
+            uuid: b892890c-32bf-4607-b300-3f78a6cf56db
+            id: invisible
+            data:
+              target: field_px_group
+              comparison: empty
+              value: ''
+              submit: 'Agregar Cancelar'
+          cbf89b87-b8e8-4140-b2df-deb090aee871:
+            uuid: cbf89b87-b8e8-4140-b2df-deb090aee871
+            id: disabled
+            data:
+              target: field_px_group
+              comparison: empty
+              value: ''
+              submit: 'Agregar Cancelar'
+          6754d7cb-9c16-428f-943a-a409bf61c57b:
+            uuid: 6754d7cb-9c16-428f-943a-a409bf61c57b
+            id: visible
+            data:
+              target: field_px_group
+              comparison: value
+              value: '14'
+              submit: 'Agregar Cancelar'
+    region: content
+  field_px_columns:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_px_drupal:
+    weight: 6
+    settings:
+      plugin_id: ''
+      settings: {  }
+      configuration_form: full
+    third_party_settings: {  }
+    type: block_field_default
+    region: content
+  field_px_group:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_px_header:
+    type: paragraphs
+    weight: 3
+    settings:
+      title: Cabecera
+      title_plural: Cabecera
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: select
+      form_display_mode: default
+      default_paragraph_type: px_header
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: '0'
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list:
+            812a379f-e215-4be9-8b2b-b74056bb647a:
+              operations:
+                edit: Editar
+                delete: Eliminar
+            239b31f7-4b76-4d90-b740-1947fbaf37ab:
+              operations:
+                edit: Editar
+                delete: Eliminar
+            0521d400-1506-4c08-aaca-4dcc2c799a5f:
+              operations:
+                edit: Editar
+                delete: Eliminar
+            58380145-deb5-408d-b525-171c867f9ce7:
+              operations:
+                edit: Editar
+                delete: Eliminar
+          add: Agregar
+        field_states:
+          812a379f-e215-4be9-8b2b-b74056bb647a:
+            uuid: 812a379f-e215-4be9-8b2b-b74056bb647a
+            id: invisible
+            data:
+              target: field_px_group
+              comparison: empty
+              value: ''
+              submit: 'Agregar Cancelar'
+          239b31f7-4b76-4d90-b740-1947fbaf37ab:
+            uuid: 239b31f7-4b76-4d90-b740-1947fbaf37ab
+            id: visible
+            data:
+              target: field_px_group
+              comparison: value
+              value: '15'
+              submit: 'Agregar Cancelar'
+          0521d400-1506-4c08-aaca-4dcc2c799a5f:
+            uuid: 0521d400-1506-4c08-aaca-4dcc2c799a5f
+            id: visible
+            data:
+              target: field_px_group
+              comparison: value
+              value: '16'
+              submit: 'Agregar Cancelar'
+          58380145-deb5-408d-b525-171c867f9ce7:
+            uuid: 58380145-deb5-408d-b525-171c867f9ce7
+            id: visible
+            data:
+              target: field_px_group
+              comparison: value
+              value: '27'
+              submit: 'Agregar Cancelar'
+    region: content
+  field_px_id:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_px_px:
+    type: paragraphs
+    weight: 4
+    settings:
+      title: Párrafo
+      title_plural: Parráfos
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: select
+      form_display_mode: default
+      default_paragraph_type: px_sencillo
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: '0'
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list:
+            76e2d2ac-e55a-4a26-aa61-924b2f81ae0f:
+              operations:
+                edit: Editar
+                delete: Eliminar
+            c56eb4fc-d302-4c97-a5e0-1445709ddc69:
+              operations:
+                edit: Editar
+                delete: Eliminar
+            62655040-0869-4f06-b13c-e362e09423db:
+              operations:
+                edit: Editar
+                delete: Eliminar
+          add: Agregar
+        field_states:
+          76e2d2ac-e55a-4a26-aa61-924b2f81ae0f:
+            uuid: 76e2d2ac-e55a-4a26-aa61-924b2f81ae0f
+            id: invisible
+            data:
+              target: field_px_group
+              comparison: empty
+              value: ''
+              submit: 'Agregar Cancelar'
+          c56eb4fc-d302-4c97-a5e0-1445709ddc69:
+            uuid: c56eb4fc-d302-4c97-a5e0-1445709ddc69
+            id: visible
+            data:
+              target: field_px_group
+              comparison: value
+              value: '15'
+              submit: 'Agregar Cancelar'
+          62655040-0869-4f06-b13c-e362e09423db:
+            uuid: 62655040-0869-4f06-b13c-e362e09423db
+            id: visible
+            data:
+              target: field_px_group
+              comparison: value
+              value: '27'
+              submit: 'Agregar Cancelar'
+    region: content
+hidden:
+  created: true
+  field_px_title: true
+  status: true

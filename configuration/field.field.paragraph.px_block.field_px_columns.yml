@@ -1,0 +1,23 @@
+uuid: cd03b3e3-e0ac-4313-bc90-e6c907745e99
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_px_columns
+    - paragraphs.paragraphs_type.px_block
+id: paragraph.px_block.field_px_columns
+field_name: field_px_columns
+entity_type: paragraph
+bundle: px_block
+label: 'Dos Columnas'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

@@ -1,0 +1,43 @@
+uuid: 2d1ad4c7-5db5-446c-96e7-b42a302730c7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_target_about
+    - node.type.targets
+    - paragraphs.paragraphs_type.px_header
+  module:
+    - entity_reference_revisions
+id: node.targets.field_target_about
+field_name: field_target_about
+entity_type: node
+bundle: targets
+label: 'Sobre / About'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      px_header: px_header
+    target_bundles_drag_drop:
+      px_acordion:
+        weight: 6
+        enabled: false
+      px_block:
+        weight: 7
+        enabled: false
+      px_carousel:
+        weight: 8
+        enabled: false
+      px_header:
+        enabled: true
+        weight: 9
+      px_sencillo:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

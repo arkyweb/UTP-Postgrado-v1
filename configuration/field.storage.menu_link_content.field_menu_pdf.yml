@@ -1,0 +1,23 @@
+uuid: 9ecbd0f5-8876-4933-aa96-d72c76fa74f7
+langcode: es
+status: true
+dependencies:
+  module:
+    - file
+    - menu_link_content
+id: menu_link_content.field_menu_pdf
+field_name: field_menu_pdf
+entity_type: menu_link_content
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

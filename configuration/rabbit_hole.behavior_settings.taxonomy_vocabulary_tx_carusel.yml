@@ -1,0 +1,14 @@
+uuid: c88e9576-7231-4ff3-8456-93377dfa1c0b
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tx_carusel
+id: taxonomy_vocabulary_tx_carusel
+entity_type_id: taxonomy_vocabulary
+entity_id: tx_carusel
+action: page_redirect
+allow_override: 1
+redirect: /<front>
+redirect_code: 301
+redirect_fallback_action: access_denied

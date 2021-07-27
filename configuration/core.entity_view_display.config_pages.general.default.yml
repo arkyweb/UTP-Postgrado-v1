@@ -1,0 +1,139 @@
+uuid: 005a82fd-f1fb-4c75-a574-9d86355baa7c
+langcode: es
+status: true
+dependencies:
+  config:
+    - config_pages.type.general
+    - field.field.config_pages.general.field_cp_autorizo
+    - field.field.config_pages.general.field_cp_direccion
+    - field.field.config_pages.general.field_cp_intercorp_img
+    - field.field.config_pages.general.field_cp_logo_img
+    - field.field.config_pages.general.field_cp_messenger
+    - field.field.config_pages.general.field_cp_publicidad
+    - field.field.config_pages.general.field_cp_rrss
+    - field.field.config_pages.general.field_cp_subs_body
+    - field.field.config_pages.general.field_cp_subs_title
+    - field.field.config_pages.general.field_cp_telefono
+    - field.field.config_pages.general.field_cp_transparencia
+    - field.field.config_pages.general.field_cp_transparencia_img
+    - field.field.config_pages.general.field_cp_whatsapp
+  module:
+    - image
+    - link
+id: config_pages.general.default
+targetEntityType: config_pages
+bundle: general
+mode: default
+content:
+  field_cp_autorizo:
+    weight: 9
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_cp_direccion:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_cp_intercorp_img:
+    weight: 8
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_cp_logo_img:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_cp_messenger:
+    weight: 12
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_cp_publicidad:
+    weight: 10
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_cp_rrss:
+    weight: 7
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_cp_subs_body:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_cp_subs_title:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_cp_telefono:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_cp_transparencia:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_cp_transparencia_img:
+    weight: 6
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_cp_whatsapp:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

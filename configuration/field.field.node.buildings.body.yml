@@ -1,0 +1,23 @@
+uuid: 20d630a1-dce8-4348-8d21-e1c0cfaf10eb
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.buildings
+  module:
+    - text
+id: node.buildings.body
+field_name: body
+entity_type: node
+bundle: buildings
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

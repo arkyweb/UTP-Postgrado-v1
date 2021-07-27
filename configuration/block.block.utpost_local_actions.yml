@@ -1,0 +1,20 @@
+uuid: de33b6ef-cecb-48aa-a7d6-fe5b23813d69
+langcode: es
+status: true
+dependencies:
+  theme:
+    - utpost
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: utpost_local_actions
+theme: utpost
+region: disabled_area
+weight: 3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Acciones principales de la administración'
+  provider: core
+  label_display: '0'
+visibility: {  }

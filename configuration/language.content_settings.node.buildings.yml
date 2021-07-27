@@ -1,0 +1,11 @@
+uuid: 79c0f31b-d66c-4006-9c70-06a39fe95087
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.buildings
+id: node.buildings
+target_entity_type_id: node
+target_bundle: buildings
+default_langcode: site_default
+language_alterable: false

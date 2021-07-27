@@ -1,0 +1,23 @@
+uuid: 1cc6ff2c-8065-4664-870e-42bbb6dab638
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_px_acordion_cuerpo
+    - paragraphs.paragraphs_type.px_sencillo
+id: paragraph.px_sencillo.field_px_acordion_cuerpo
+field_name: field_px_acordion_cuerpo
+entity_type: paragraph
+bundle: px_sencillo
+label: 'Acordion con Cuerpo'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

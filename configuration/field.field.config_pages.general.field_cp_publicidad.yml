@@ -1,0 +1,19 @@
+uuid: 12d08a68-2d03-4f4c-bca8-a14882e65bda
+langcode: es
+status: true
+dependencies:
+  config:
+    - config_pages.type.general
+    - field.storage.config_pages.field_cp_publicidad
+id: config_pages.general.field_cp_publicidad
+field_name: field_cp_publicidad
+entity_type: config_pages
+bundle: general
+label: Publicidad
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

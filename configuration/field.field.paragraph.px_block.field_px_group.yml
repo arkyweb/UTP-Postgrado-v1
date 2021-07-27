@@ -1,0 +1,29 @@
+uuid: 8ad8729d-d33f-4002-953f-63f52c4bfb69
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_px_group
+    - paragraphs.paragraphs_type.px_block
+    - taxonomy.vocabulary.tx_parrafos
+id: paragraph.px_block.field_px_group
+field_name: field_px_group
+entity_type: paragraph
+bundle: px_block
+label: 'Grupo de Parrafo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tx_parrafos: tx_parrafos
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

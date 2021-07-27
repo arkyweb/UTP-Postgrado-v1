@@ -1,0 +1,9 @@
+<style>
+{% include '@utpost/system/styles/i.css' ignore missing %}
+{% if is_front %}
+  {% include '@utpost/system/styles/i.home.css' ignore missing %}
+{% endif %}
+{% if node.getType in ['targets'] %}
+  {% include '@utpost/system/styles/i.target.css' ignore missing %}
+{% endif %}
+</style>

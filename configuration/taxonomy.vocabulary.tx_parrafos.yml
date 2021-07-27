@@ -1,0 +1,8 @@
+uuid: 790c39c0-7118-4b27-9cc1-a5ac180b00d2
+langcode: es
+status: true
+dependencies: {  }
+name: Bloques
+vid: tx_parrafos
+description: ''
+weight: 0

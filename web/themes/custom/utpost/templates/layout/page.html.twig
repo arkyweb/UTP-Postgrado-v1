@@ -1,0 +1,16 @@
+{% include '@utpost/layout/elements/header.html.twig' ignore missing %}
+<main class="main" role="main">
+
+  {% if page.content %}
+    {{ page.content }}
+  {% endif %}
+
+</main>
+{% include '@utpost/layout/elements/footer.html.twig' ignore missing %}
+
+<div id="modales" class="modales">
+{% include '@utpost/layout/formularios/form_contacto.html.twig' ignore missing %}
+{% include '@utpost/layout/elements/buscador.html.twig' ignore missing %}
+{% include '@utpost/layout/elements/movil.html.twig' ignore missing %}
+{% include '@utpost/layout/formularios/form_targets.html.twig' ignore missing %}
+</div>
